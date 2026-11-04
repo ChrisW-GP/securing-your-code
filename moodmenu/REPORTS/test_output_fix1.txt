@@ -1,0 +1,57 @@
+=== npm test ===
+
+> moodmenu-ai-mvp@1.0.0 test
+> vitest run
+
+
+ RUN  v5.1.0 C:/Users/n12322202/.copilot/repos/copilot-worktrees/securing-your-code/chrisw-gp-sturdy-sniffle/moodmenu
+
+
+ Test Files  4 passed (4)
+      Tests  40 passed (40)
+   Start at  15:26:36
+   Duration  449ms (import 72%, tests 14%, transform 11%, worker 3%)
+
+Exit code: 0
+=== npm run typecheck ===
+
+> moodmenu-ai-mvp@1.0.0 typecheck
+> tsc --noEmit
+
+Exit code: 0
+=== npm run build ===
+
+> moodmenu-ai-mvp@1.0.0 build
+> next build
+
+▲ Next.js 16.4.4 (Turbopack)
+✓ Running next.config took 20ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 967ms
+  Running TypeScript ...
+  Finished TypeScript in 1543ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 834ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/menu
+└ ƒ /api/recommend
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Exit code: 0

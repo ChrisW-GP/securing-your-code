@@ -1,22 +1,31 @@
 import type { Dish, Mood, Profile } from "./schemas";
+import { normalizeIngredientText } from "./ingredients";
 
 export type Candidate = { dish: Dish; score: number; reasons: string[] };
 
 const ingredientAliases: Record<string, string[]> = {
-  牛肉: ["beef", "牛腩", "牛排", "牛肉"],
-  豬肉: ["pork", "豬肉", "猪肉", "培根", "火腿"],
-  雞肉: ["chicken", "雞肉", "鸡肉"],
-  海鮮: ["seafood", "魚", "鱼", "蝦", "虾", "蟹", "貝", "貝類"],
+  猪肉: ["猪肉", "排骨", "五花", "叉烧", "香肠", "腊肠", "培根", "火腿", "猪蹄", "pork"],
+  牛肉: ["牛肉", "牛腩", "牛排", "beef"],
+  鸡肉: ["鸡肉", "鸡", "chicken"],
+  羊肉: ["羊肉", "羊排", "mutton", "lamb"],
+  海鲜: ["海鲜", "鱼", "虾", "蟹", "贝", "蚝", "鱿鱼", "墨鱼", "蛤蜊", "海参", "seafood"],
+  花生: ["花生", "peanut", "peanuts"],
+  乳制品: ["乳制品", "牛奶", "奶", "奶油", "芝士", "乳酪", "黄油", "milk", "dairy"],
+  鸡蛋: ["鸡蛋", "蛋", "egg", "eggs"],
+  "麸质/小麦": ["麸质/小麦", "gluten/wheat", "麸质", "小麦", "面粉", "gluten", "wheat"],
 };
 
 function mentions(text: string, term: string): boolean {
-  const normalized = text.toLocaleLowerCase();
-  const needle = term.toLocaleLowerCase();
+  const normalized = normalizeIngredientText(text);
+  const needle = normalizeIngredientText(term);
   return normalized.includes(needle);
 }
 
 function exclusionTerms(term: string): string[] {
-  return ingredientAliases[term] ?? [term];
+  const normalized = normalizeIngredientText(term.trim());
+  const group = Object.values(ingredientAliases).find((aliases) =>
+    aliases.some((alias) => normalizeIngredientText(alias) === normalized));
+  return group ?? [normalized];
 }
 
 function containsKnownIngredient(dish: Dish, term: string): boolean {
@@ -38,8 +47,10 @@ export function rankDishes(
     .filter((dish) => !profile.excludedIngredients.some((term) => containsKnownIngredient(dish, term)))
     .filter((dish) => profile.budget === null || (dish.price !== null && dish.price <= profile.budget))
     .map((dish) => {
-      const reasons = ["符合已设置的硬性条件"];
+      const ingredientsUnverified = profile.excludedIngredients.length > 0 && !dish.ingredientsKnown;
+      const reasons = [ingredientsUnverified ? "忌口无法核实：配料未知" : "符合已设置的硬性条件"];
       let score = dish.verifiedByUser ? 3 : 0;
+      if (ingredientsUnverified) score -= 1000;
       const foodText = [dish.name, dish.description, ...dish.ingredients].join(" ");
       for (const favorite of profile.favoriteIngredients) {
         if (mentions(foodText, favorite)) {
@@ -72,9 +83,12 @@ export function rankDishes(
         reasons.push("符合不辣要求");
       }
       if (context.trim()) reasons.push(`结合情境：${context.trim()}`);
-      return { dish, score, reasons };
+      return { dish, score, reasons, ingredientsUnverified };
     })
-    .sort((a, b) => b.score - a.score || (a.dish.price ?? Infinity) - (b.dish.price ?? Infinity));
+    .sort((a, b) => Number(a.ingredientsUnverified) - Number(b.ingredientsUnverified)
+      || b.score - a.score
+      || (a.dish.price ?? Infinity) - (b.dish.price ?? Infinity))
+    .map(({ ingredientsUnverified: _uncertain, ...candidate }) => candidate);
 }
 
 export function emptyReason(profile: Profile, dishes: Dish[]): string {

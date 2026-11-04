@@ -164,4 +164,58 @@ describe("recommendation API", () => {
     expect(result.menu.items).toEqual([]);
     expect(result.omittedUnclear).toBe(1);
   });
+
+  it("replaces model dish IDs with unique server IDs on every photo recognition", async () => {
+    vi.stubEnv("OPENAI_API_KEY", "test-key");
+    vi.stubGlobal("fetch", vi.fn().mockImplementation(() => Promise.resolve(modelResponse(JSON.stringify({
+      items: [
+        { id: "dish-1", name: "番茄面", price: 22, ingredients: [], ingredientsKnown: false, confidence: 0.9 },
+        { id: "dish-2", name: "豆腐汤", price: 24, ingredients: [], ingredientsKnown: false, confidence: 0.9 },
+      ],
+    })))));
+    const upload = () => {
+      const form = new FormData();
+      form.append("photos", new File([new Uint8Array([0xff, 0xd8, 0xff])], "menu.jpg", { type: "image/jpeg" }));
+      return recognize(new Request("http://localhost/api/menu", {
+        method: "POST",
+        headers: { "content-length": "500" },
+        body: form,
+      }));
+    };
+    const first = await (await upload()).json();
+    const second = await (await upload()).json();
+    expect(first).toHaveProperty("menu");
+    expect(second).toHaveProperty("menu");
+    const { mergeMenuItems } = await import("../lib/store");
+    const merged = mergeMenuItems(first.menu.items, second.menu.items);
+    const { MenuSchema } = await import("../lib/schemas");
+    expect(merged.map(({ id }) => id)).not.toContain("dish-1");
+    expect(merged.map(({ id }) => id)).not.toContain("dish-2");
+    expect(MenuSchema.safeParse({ items: merged }).success).toBe(true);
+    expect(new Set(merged.map(({ id }) => id)).size).toBe(4);
+  });
+
+  it("parses valid OCR entries individually and counts invalid entries without failing the menu", async () => {
+    vi.stubEnv("OPENAI_API_KEY", "test-key");
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(modelResponse(JSON.stringify({
+      items: [
+        { id: "duplicate", name: "价格可读的菜", price: "¥38", ingredients: [], ingredientsKnown: false, confidence: 0.9 },
+        { id: "duplicate", name: "价格模糊的菜", price: "请询价", ingredients: [], ingredientsKnown: false, confidence: 0.9 },
+        { id: "duplicate", name: "", price: 10, confidence: 0.9 },
+      ],
+    }))));
+    const form = new FormData();
+    form.append("photos", new File([new Uint8Array([0xff, 0xd8, 0xff])], "menu.jpg", { type: "image/jpeg" }));
+    const response = await recognize(new Request("http://localhost/api/menu", {
+      method: "POST",
+      headers: { "content-length": "500" },
+      body: form,
+    }));
+    const result = await response.json();
+    expect(response.status).toBe(200);
+    expect(result.menu.items).toHaveLength(2);
+    expect(result.menu.items[0].price).toBe(38);
+    expect(result.menu.items[1].price).toBeNull();
+    expect(result.discardedCount).toBe(1);
+  });
 });

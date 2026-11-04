@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
-import { MenuSchema } from "@/lib/schemas";
+import { z } from "zod";
+import { DishSchema, MenuSchema } from "@/lib/schemas";
 import { chatCompletion, imageDataUri, imageSignatureMatches } from "@/lib/openai";
+import { createUniqueId } from "@/lib/ids";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -11,6 +13,17 @@ const SUPPORTED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 
 function errorResponse(message: string, status: number) {
   return NextResponse.json({ error: message }, { status });
+}
+
+function parseOcrPrice(value: string): number | null {
+  const matched = value.trim().match(/^[¥￥$€£]?\s*(\d+(?:\.\d{1,2})?)\s*(?:元)?$/);
+  if (!matched) return null;
+  const price = Number(matched[1]);
+  return Number.isFinite(price) && price >= 0 ? price : null;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 export async function POST(request: Request) {
@@ -66,12 +79,37 @@ export async function POST(request: Request) {
         ],
       },
     ]);
-    const parsed = MenuSchema.safeParse(result);
-    if (!parsed.success) return errorResponse("菜单识别结果未通过校验，请重拍或手动录入。", 502);
-    const clearItems = parsed.data.items.filter((item) => item.confidence >= 0.7);
+    const response = z.object({ items: z.array(z.unknown()).max(500) }).safeParse(result);
+    if (!response.success) return errorResponse("菜单识别结果未通过校验，请重拍或手动录入。", 502);
+
+    const usedIds = new Set<string>();
+    const validItems = [];
+    let discardedCount = 0;
+    for (const [index, rawItem] of response.data.items.entries()) {
+      if (validItems.length >= 200 || !isRecord(rawItem)) {
+        discardedCount += 1;
+        continue;
+      }
+      const price = typeof rawItem.price === "string" ? parseOcrPrice(rawItem.price) : rawItem.price;
+      const parsedItem = DishSchema.safeParse({
+        ...rawItem,
+        id: `ocr-${index}`,
+        price,
+      });
+      if (!parsedItem.success) {
+        discardedCount += 1;
+        continue;
+      }
+      validItems.push({ ...parsedItem.data, id: createUniqueId("scan", usedIds) });
+    }
+
+    const clearItems = validItems.filter((item) => item.confidence >= 0.7);
+    const finalMenu = MenuSchema.safeParse({ items: clearItems });
+    if (!finalMenu.success) return errorResponse("菜单识别结果未通过校验，请重拍或手动录入。", 502);
     return NextResponse.json({
-      menu: { items: clearItems },
-      omittedUnclear: parsed.data.items.length - clearItems.length,
+      menu: finalMenu.data,
+      omittedUnclear: validItems.length - clearItems.length,
+      discardedCount,
       mode: "recognized",
     });
   } catch (error) {

@@ -24,12 +24,23 @@ export const MenuSchema = z.object({
 export const ProfileSchema = z.object({
   budget: z.number().positive().nullable(),
   currency: z.string().max(8),
-  excludedIngredients: z.array(z.string().trim().min(1)).max(50),
+  excludedIngredients: z.array(z.string().trim().min(1).max(80)).max(500),
   favoriteIngredients: z.array(z.string().trim().min(1)).max(50),
   dietaryNotes: z.string().max(500),
 });
 
 export const MoodSchema = z.enum(["想吃点暖的", "清爽轻盈", "犒劳自己", "快速填饱", "随心看看"]);
+export const ContextSchema = z.string().max(240);
+export const RefinementSchema = z.string().max(240);
+
+export const HistoryEntrySchema = z.object({
+  id: z.string().min(1).max(200),
+  dish: DishSchema,
+  reason: z.string().max(2000),
+  mood: MoodSchema,
+  createdAt: z.string().datetime(),
+  feedback: z.enum(["liked", "rejected"]).optional(),
+});
 
 export const RecommendationRequestSchema = z.object({
   dishes: z.array(DishSchema).max(200),
@@ -54,4 +65,5 @@ export type Dish = z.infer<typeof DishSchema>;
 export type Menu = z.infer<typeof MenuSchema>;
 export type Profile = z.infer<typeof ProfileSchema>;
 export type Mood = z.infer<typeof MoodSchema>;
+export type HistoryEntry = z.infer<typeof HistoryEntrySchema>;
 export type RecommendationRequest = z.infer<typeof RecommendationRequestSchema>;

@@ -1,0 +1,18 @@
+Changed files from git status --short --untracked-files=all:
+ M moodmenu/app/api/menu/route.ts
+ M moodmenu/app/page.tsx
+ M moodmenu/lib/recommend.ts
+ M moodmenu/lib/schemas.ts
+ M moodmenu/lib/store.ts
+ M moodmenu/README.md
+ M moodmenu/tests/recommend.test.ts
+ M moodmenu/tests/routes.test.ts
+ M moodmenu/tests/store.test.ts
+?? moodmenu/lib/ids.ts
+?? moodmenu/lib/image.ts
+?? moodmenu/lib/ingredients.ts
+?? moodmenu/lib/photo-picker.ts
+?? moodmenu/REPORTS/MoodMenu-AI-MVP-fix1.zip
+?? moodmenu/REPORTS/REPORT_fix1.md
+?? moodmenu/REPORTS/test_output_fix1.txt
+?? moodmenu/tests/fix1-utils.test.ts

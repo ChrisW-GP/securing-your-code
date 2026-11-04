@@ -1,8 +1,12 @@
 "use client";
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
-import { useMoodMenuStore, type HistoryEntry } from "@/lib/store";
+import { mergeMenuItems, recordDishFeedback, useMoodMenuStore, type HistoryEntry } from "@/lib/store";
 import { DishSchema, type Dish, type Mood } from "@/lib/schemas";
+import { createId } from "@/lib/ids";
+import { compressImage } from "@/lib/image";
+import { parseIngredientInput } from "@/lib/ingredients";
+import { photoPickerProps } from "@/lib/photo-picker";
 
 type View = "home" | "menu" | "preferences" | "context" | "recommendations" | "history";
 type Candidate = { dish: Dish; score: number; reasons: string[] };
@@ -39,14 +43,15 @@ function AppShell() {
   const [photoError, setPhotoError] = useState("");
   const [excludedInput, setExcludedInput] = useState("");
   const [favoriteInput, setFavoriteInput] = useState("");
-  const [refinementDraft, setRefinementDraft] = useState("");
   const [manualName, setManualName] = useState("");
   const [manualPrice, setManualPrice] = useState("");
+  const [ingredientDrafts, setIngredientDrafts] = useState<Record<string, string>>({});
   const photoInput = useRef<HTMLInputElement>(null);
   const current = result?.recommendation?.dish;
 
   async function recognizePhotos(event: ChangeEvent<HTMLInputElement>) {
     const files = Array.from(event.target.files ?? []);
+    let compressionFailures = 0;
     setPhotoError("");
     if (!files.length) return;
     if (files.length > 5) {
@@ -59,26 +64,29 @@ function AppShell() {
       event.target.value = "";
       return;
     }
-    if (files.some((file) => file.size > 5 * 1024 * 1024) || files.reduce((sum, file) => sum + file.size, 0) > 10 * 1024 * 1024) {
-      setPhotoError("单张照片不超过 5 MB，合计不超过 10 MB。");
-      event.target.value = "";
-      return;
-    }
-    const formData = new FormData();
-    files.forEach((file) => formData.append("photos", file));
     setBusy(true);
     try {
+      const prepared = await Promise.all(files.map((file) => compressImage(file)));
+      compressionFailures = prepared.filter(({ failed }) => failed).length;
+      const uploadFiles = prepared.map(({ file }) => file);
+      if (uploadFiles.some((file) => file.size > 5 * 1024 * 1024)
+        || uploadFiles.reduce((sum, file) => sum + file.size, 0) > 10 * 1024 * 1024) {
+        throw new Error("压缩后的照片仍超过限制（单张 5 MB，合计 10 MB）。");
+      }
+      const formData = new FormData();
+      uploadFiles.forEach((file) => formData.append("photos", file));
       const response = await fetch("/api/menu", { method: "POST", body: formData });
-      const payload = await response.json() as { menu?: { items?: Dish[] }; error?: string; omittedUnclear?: number };
+      const payload = await response.json() as { menu?: { items?: Dish[] }; error?: string; omittedUnclear?: number; discardedCount?: number };
       if (!response.ok) throw new Error(payload.error ?? "菜单识别失败。");
       const parsed = DishSchema.array().safeParse(payload.menu?.items);
       if (!parsed.success) throw new Error("识别结果格式不正确。");
-      update({ menu: { items: [...state.menu.items, ...parsed.data] } });
+      update({ menu: { items: mergeMenuItems(state.menu.items, parsed.data) } });
       setNotice(parsed.data.length === 0
-        ? "没有清晰到足以确认的菜品文字，模糊内容未加入菜单。请重拍或手动录入。"
-        : `已读取 ${parsed.data.length} 道清晰菜单文字${payload.omittedUnclear ? `，另有 ${payload.omittedUnclear} 项模糊内容未加入` : ""}；请逐项核对后再使用。`);
+        ? `没有清晰到足以确认的菜品文字，模糊内容未加入菜单。请重拍或手动录入。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`
+        : `已读取 ${parsed.data.length} 道清晰菜单文字${payload.omittedUnclear ? `，另有 ${payload.omittedUnclear} 项模糊内容未加入` : ""}${payload.discardedCount ? `，${payload.discardedCount} 项格式不完整已丢弃` : ""}；请逐项核对后再使用。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
     } catch (error) {
-      setPhotoError(error instanceof Error ? error.message : "菜单识别失败。");
+      const message = error instanceof Error ? error.message : "菜单识别失败。";
+      setPhotoError(`${message}${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
     } finally {
       setBusy(false);
       event.target.value = "";
@@ -98,7 +106,7 @@ function AppShell() {
           profile: state.profile,
           mood: state.mood,
           context: state.context,
-          refinement: refinementDraft || state.refinement,
+          refinement: state.refinement,
           rejectedDishIds: state.rejectedDishIds,
           excludedDishIds,
         }),
@@ -115,7 +123,7 @@ function AppShell() {
           mood: state.mood,
           createdAt: new Date().toISOString(),
         };
-        update({ refinement: refinementDraft, history: [entry, ...state.history].slice(0, 100) });
+        update({ history: [entry, ...state.history].slice(0, 100) });
       }
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "推荐暂时不可用。");
@@ -138,21 +146,30 @@ function AppShell() {
 
   function recordFeedback(feedback: "liked" | "rejected") {
     if (!current) return;
-    const history = state.history.map((entry) => entry.dish.id === current.id && !entry.feedback ? { ...entry, feedback } : entry);
+    const updatedState = recordDishFeedback(state, current, feedback);
     if (feedback === "rejected") {
-      update({ history, rejectedDishIds: [...new Set([...state.rejectedDishIds, current.id])] });
+      update(updatedState);
       void getRecommendation([current.id]);
       return;
     }
-    update({
-      history,
-      profile: { ...state.profile, favoriteIngredients: [...new Set([...state.profile.favoriteIngredients, ...current.ingredients])] },
-    });
-    setNotice("已记住这份喜欢，下次会更懂你的口味。");
+    update(updatedState);
+    setNotice("已记录这份喜欢。");
   }
 
   function updateDish(id: string, patch: Partial<Dish>) {
     update({ menu: { items: state.menu.items.map((dish) => dish.id === id ? { ...dish, ...patch, verifiedByUser: true } : dish) } });
+  }
+
+  function commitIngredients(dish: Dish, value: string) {
+    updateDish(dish.id, {
+      ingredients: parseIngredientInput(value),
+      ingredientsKnown: parseIngredientInput(value).length > 0,
+    });
+    setIngredientDrafts((drafts) => {
+      const next = { ...drafts };
+      delete next[dish.id];
+      return next;
+    });
   }
 
   function addManualDish(event: FormEvent<HTMLFormElement>) {
@@ -165,7 +182,7 @@ function AppShell() {
       return;
     }
     const dish: Dish = {
-      id: `manual-${crypto.randomUUID()}`,
+      id: createId("manual"),
       name,
       description: "",
       price: parsedPrice,
@@ -210,6 +227,7 @@ function AppShell() {
       <section className="main-column">
         <header className="topbar"><span className="today-label">YOUR LITTLE FOOD COMPANION</span><span className="local-badge"><i /> 本机记忆已开启</span></header>
         {notice && <div className="notice" role="status">{notice}<button onClick={() => setNotice("")} aria-label="关闭提示">×</button></div>}
+        {view === "home" && state.recoveryNotice && <div className="notice storage-notice" role="status">{state.recoveryNotice}</div>}
 
         {view === "home" && <div className="page home-page">
           <div className="hero">
@@ -234,7 +252,7 @@ function AppShell() {
         {view === "menu" && <div className="page">
           <div className="page-title"><span className="eyebrow">YOUR REAL MENU</span><h1>把菜单，交给我看看</h1><p>拍摄餐厅菜单，识别后可逐项校对、修改或删除。模糊的内容不会被猜出来。</p></div>
           <section className="upload-card">
-            <input ref={photoInput} className="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" multiple onChange={recognizePhotos} />
+            <input ref={photoInput} className="visually-hidden" type="file" {...photoPickerProps} onChange={recognizePhotos} />
             <span className="upload-icon">↑</span><h2>{busy ? "正在读取菜单…" : "拍照或上传菜单照片"}</h2><p>支持 JPG、PNG、WebP · 最多 5 张 · 单张 ≤ 5 MB</p>
             <button className="primary-button" disabled={busy} onClick={() => photoInput.current?.click()}>{busy ? "请稍等" : "选择照片"} <span>↗</span></button>
             {photoError && <p className="inline-error" role="alert">{photoError}</p>}
@@ -247,7 +265,7 @@ function AppShell() {
           <section className="menu-list-section"><div className="section-heading"><div><span className="eyebrow">CHECK BEFORE YOU CHOOSE</span><h2>菜单上的菜 <span className="count-pill">{state.menu.items.length}</span></h2></div>{state.menu.items.length > 0 && <button className="text-button" onClick={() => { update({ menu: { items: [] } }); setResult(null); }}>清空菜单</button>}</div>
             {state.menu.items.length === 0 ? <div className="empty-card"><span>▤</span><b>你的菜单还空空的</b><small>上传照片、手动录入，或选择上方的独立示例菜单。</small></div> : <div className="dish-table">
               <div className="table-head"><span>菜品 / 核对信息</span><span>价格</span><span>操作</span></div>
-              {state.menu.items.map((dish) => <div className="dish-row" key={dish.id}><div className="dish-name-cell"><input aria-label="菜名" value={dish.name} onChange={(e) => updateDish(dish.id, { name: e.target.value })} maxLength={120} /><small>{dish.ingredientsKnown ? `食材：${dish.ingredients.join("、") || "待核对"}` : "食材未知 · 请向餐厅确认"}{dish.confidence < 0.75 ? " · 识别信心较低，请核对" : ""}</small><div className="ingredient-edit"><input aria-label="食材列表" value={dish.ingredients.join(", ")} onChange={(e) => updateDish(dish.id, { ingredients: e.target.value.split(",").map((v) => v.trim()).filter(Boolean), ingredientsKnown: e.target.value.trim().length > 0 })} placeholder="补充食材（逗号分隔，未知留空）" /><select aria-label="辣度" value={dish.spicyLevel} onChange={(e) => updateDish(dish.id, { spicyLevel: e.target.value as Dish["spicyLevel"] })}><option value="unknown">辣度未知</option><option value="none">不辣</option><option value="mild">微辣</option><option value="medium">中辣</option><option value="hot">很辣</option></select></div></div><div><input className="price-input" aria-label="菜品价格" type="number" min="0" step="0.01" placeholder="未知" value={dish.price ?? ""} onChange={(e) => updateDish(dish.id, { price: e.target.value ? Number(e.target.value) : null })} /></div><button className="delete-button" aria-label={`删除${dish.name}`} onClick={() => update({ menu: { items: state.menu.items.filter((item) => item.id !== dish.id) } })}>删除</button></div>)}
+              {state.menu.items.map((dish) => <div className="dish-row" key={dish.id}><div className="dish-name-cell"><input aria-label="菜名" value={dish.name} onChange={(e) => updateDish(dish.id, { name: e.target.value })} maxLength={120} /><small>{dish.ingredientsKnown ? `食材：${dish.ingredients.join("、") || "待核对"}` : "食材未知 · 请向餐厅确认"}{dish.confidence < 0.75 ? " · 识别信心较低，请核对" : ""}</small><div className="ingredient-edit"><input aria-label="食材列表" value={ingredientDrafts[dish.id] ?? dish.ingredients.join(", ")} onChange={(e) => setIngredientDrafts((drafts) => ({ ...drafts, [dish.id]: e.target.value }))} onBlur={(e) => commitIngredients(dish, e.currentTarget.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); commitIngredients(dish, e.currentTarget.value); } }} placeholder="补充食材（逗号分隔，未知留空）" /><select aria-label="辣度" value={dish.spicyLevel} onChange={(e) => updateDish(dish.id, { spicyLevel: e.target.value as Dish["spicyLevel"] })}><option value="unknown">辣度未知</option><option value="none">不辣</option><option value="mild">微辣</option><option value="medium">中辣</option><option value="hot">很辣</option></select></div></div><div><input className="price-input" aria-label="菜品价格" type="number" min="0" step="0.01" placeholder="未知" value={dish.price ?? ""} onChange={(e) => updateDish(dish.id, { price: e.target.value ? Number(e.target.value) : null })} /></div><button className="delete-button" aria-label={`删除${dish.name}`} onClick={() => update({ menu: { items: state.menu.items.filter((item) => item.id !== dish.id) } })}>删除</button></div>)}
             </div>}
             {state.menu.items.length > 0 && <div className="safety-note">⚠ 菜单文字和配料可能有遗漏。请人工核实；这不是过敏原安全保证。</div>}
           </section>
@@ -277,7 +295,7 @@ function AppShell() {
           {!busy && result && !result.recommendation && <div className="empty-card"><span>☼</span><b>这次没有合适的候选</b><small>{result.reason}</small><button className="outline-button" onClick={() => setView("menu")}>核对菜单</button></div>}
           {!busy && !result && <div className="empty-card"><span>✳</span><b>还没有开始今天的挑选</b><small>准备好菜单和偏好后，我们再一起看看。</small><button className="primary-button" onClick={() => void getRecommendation()}>开始推荐 ↗</button></div>}
           {result?.candidates && result.candidates.length > 1 && <div className="other-candidates"><span className="eyebrow">ALSO ON YOUR MENU</span><div>{result.candidates.filter((candidate) => candidate.dish.id !== current?.id).slice(0, 4).map((candidate) => <button key={candidate.dish.id} onClick={() => chooseCandidate(candidate)}><span>{candidate.dish.name}</span><small>{formatPrice(candidate.dish)}</small></button>)}</div></div>}
-          <section className="refine-card"><label htmlFor="refinement" className="field-label">还想微调一下？</label><p className="field-hint">说说你现在的口味。预算和忌口仍会优先保留。</p><div className="refine-row"><input id="refinement" value={refinementDraft} maxLength={240} onChange={(e) => setRefinementDraft(e.target.value)} placeholder="比如：微辣就好，或想吃点热的" onKeyDown={(e) => { if (e.key === "Enter") void getRecommendation(); }} /><button className="outline-button" disabled={busy} onClick={() => void getRecommendation()}>重新挑选 ↗</button></div></section>
+          <section className="refine-card"><label htmlFor="refinement" className="field-label">还想微调一下？</label><p className="field-hint">说说你现在的口味。预算和忌口仍会优先保留。</p><div className="refine-row"><input id="refinement" value={state.refinement} maxLength={240} onChange={(e) => update({ refinement: e.target.value })} placeholder="比如：微辣就好，或想吃点热的" onKeyDown={(e) => { if (e.key === "Enter") void getRecommendation(); }} /><button className="outline-button" disabled={busy} onClick={() => void getRecommendation()}>重新挑选 ↗</button></div></section>
         </div>}
 
         {view === "history" && <div className="page">
