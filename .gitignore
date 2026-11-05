@@ -64,3 +64,8 @@ config/*.yml
 
 # System Files
 .DS_Store
+
+# MoodMenu is a separate Next.js application within the workshop repository.
+!moodmenu/package-lock.json
+!moodmenu/app/
+!moodmenu/app/**

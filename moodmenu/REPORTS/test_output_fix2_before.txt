@@ -1,0 +1,2833 @@
+Command: npm test -- tests/fix2.test.ts
+Baseline source: first-round commit f1d16bd
+
+
+> moodmenu-ai-mvp@1.0.0 test
+> vitest run tests/fix2.test.ts
+
+
+ RUN  v5.1.0 C:/Users/N12322~1/AppData/Local/Temp/moodmenu-fix2-baseline-53e344b903e54581b58467a45c9e858f/moodmenu
+
+ ❯ tests/fix2.test.ts (193 tests | 110 failed) 55ms
+   ❯ fix2 independent real-menu exclusion coverage (189)
+     × exclusion sample 牛肉 / 肥牛金针菇 has expected result 5ms
+     × exclusion sample 牛肉 / 黑椒牛柳 has expected result 1ms
+     × exclusion sample 牛肉 / 卤牛腱 has expected result 0ms
+     × exclusion sample 牛肉 / 牛仔骨煲 has expected result 0ms
+     × exclusion sample 牛肉 / 红烧牛杂 has expected result 0ms
+     × exclusion sample 牛肉 / 牛尾汤 has expected result 0ms
+     × exclusion sample 牛肉 / 葱爆牛筋 has expected result 0ms
+     × exclusion sample 牛肉 / 卤牛肚 has expected result 0ms
+     × exclusion sample 猪肉 / 红烧肉 has expected result 0ms
+     × exclusion sample 猪肉 / 东坡肉 has expected result 0ms
+     × exclusion sample 猪肉 / 回锅肉 has expected result 0ms
+     × exclusion sample 猪肉 / 清蒸狮子头 has expected result 0ms
+     × exclusion sample 猪肉 / 肉糜蒸蛋 has expected result 0ms
+     × exclusion sample 猪肉 / 香煎里脊 has expected result 0ms
+     × exclusion sample 猪肉 / 梅菜扣肉 has expected result 0ms
+     × exclusion sample 猪肉 / 肉松饭团 has expected result 0ms
+     × exclusion sample 猪肉 / 肉末蒸豆腐 has expected result 0ms
+     × exclusion sample 猪肉 / 猪油拌饭 has expected result 0ms
+     × exclusion sample 猪肉 / 猪肝汤 has expected result 0ms
+     × exclusion sample 猪肉 / 香菇青菜 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 牛肉拌面 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 清汤面 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 鸡丝面条 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 手工拉面 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 蒜香面包 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 白菜猪肉饺子 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 手工饺子皮 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 鲜肉馄饨 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 白馒头 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 叉烧包子 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 奶黄包 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 葱油饼 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 芝麻烧饼 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 葡式蛋挞 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 黄油可颂 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 肉夹馍 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 苏打饼干 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 小笼包 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 生煎包 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 玛格丽特披萨 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 罗勒意面 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香煎面筋 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 鲜虾烧麦 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香脆油条 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 酱油炒饭 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 蔬菜意面 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 鸡肉沙拉 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 烤蔬菜 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 海鲜拼盘 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香煎鳕鱼 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 脆皮鸡 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 海鲜炒饭 has expected result 0ms
+     × exclusion sample 乳制品 / 燕麦拿铁 has expected result 0ms
+     × exclusion sample 乳制品 / 卡布奇诺 has expected result 0ms
+     × exclusion sample 乳制品 / 香草冰淇淋 has expected result 0ms
+     × exclusion sample 乳制品 / 番茄浓汤 has expected result 0ms
+     × exclusion sample 乳制品 / 烤面包 has expected result 0ms
+     × exclusion sample 乳制品 / 西式煎饼 has expected result 0ms
+     × exclusion sample 乳制品 / 水果杯 has expected result 0ms
+     × exclusion sample 乳制品 / 咖啡 has expected result 0ms
+     × exclusion sample 乳制品 / 蛋白饮品 has expected result 0ms
+     × exclusion sample 乳制品 / 提拉米苏 has expected result 0ms
+     × exclusion sample 乳制品 / 焗通心粉 has expected result 0ms
+     × exclusion sample 海鲜 / 清蒸文蛤 has expected result 0ms
+     × exclusion sample 海鲜 / 清炒蛤 has expected result 0ms
+     × exclusion sample 海鲜 / 香辣田螺 has expected result 0ms
+     × exclusion sample 海鲜 / 蒜蓉海螺 has expected result 0ms
+     × exclusion sample 海鲜 / 海胆蒸蛋 has expected result 0ms
+     × exclusion sample 海鲜 / 炒青菜 has expected result 0ms
+     × exclusion sample 海鲜 / 烤鸡 has expected result 0ms
+     × exclusion sample 海鲜 / 咖喱饭 has expected result 0ms
+     × exclusion sample 海鲜 / 蔬菜汤 has expected result 0ms
+     × exclusion sample 海鲜 / 烤饭团 has expected result 0ms
+     × exclusion sample 海鲜 / 炒面 has expected result 0ms
+     × exclusion sample 海鲜 / 烤蔬菜 has expected result 0ms
+     × exclusion sample 海鲜 / 蔬菜汤 has expected result 0ms
+     × exclusion sample 海鲜 / 寿司拼盘 has expected result 0ms
+     × exclusion sample 鸡蛋 / 蔬菜沙拉 has expected result 0ms
+     × exclusion sample 鸡蛋 / 火腿三明治 has expected result 0ms
+     × exclusion sample 花生 / 咖喱串烧 has expected result 0ms
+     × exclusion sample 海鲜 / 鱼香茄子 has expected result 0ms
+     × exclusion sample 海鲜 / 魚香茄子 has expected result 0ms
+     × exclusion sample 鸡肉 / 番茄炒鸡蛋 has expected result 0ms
+     × exclusion sample 鸡肉 / 番茄炒雞蛋 has expected result 0ms
+     × exclusion sample 乳制品 / 椰奶咖啡 has expected result 0ms
+     × exclusion sample 猪肉 / 紅燒肉 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 牛腩麵 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 瑪格麗特披薩 has expected result 0ms
+     × exclusion sample 乳制品 / 卡布奇諾 has expected result 0ms
+     × exclusion sample 猪肉 / 東坡肉 has expected result 0ms
+     × exclusion sample 猪肉 / 回鍋肉 has expected result 0ms
+     × exclusion sample 猪肉 / 紅燒獅子頭 has expected result 0ms
+     × exclusion sample 猪肉 / 香煎裡脊 has expected result 0ms
+     × exclusion sample 猪肉 / 梅菜扣肉 has expected result 0ms
+     × exclusion sample 牛肉 / 紅燒牛雜 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 牛肉拌麵 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 手工饅頭 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香煎麵餅 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 羅勒意麵 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香煎麵筋 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 醬油炒飯 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 鮮蝦燒麥 has expected result 0ms
+     × exclusion sample 麸质/小麦 / 香脆油條 has expected result 0ms
+     × exclusion sample 海鲜 / 海膽蒸蛋 has expected result 0ms
+     × shows each exclusion category's expanded matching terms beside its preference label 1ms
+     × blocks adding an additional favorite after the 50-item limit with visible feedback 1ms
+   ❯ fix2 model and upload regressions (4)
+     × only sends verified-safe candidates to the model and rejects an unverified model pick 8ms
+     × fills the image canvas white before drawing transparent source images 1ms
+     × keeps an OCR entry whose price property is missing and normalizes its price to null 8ms
+     × uses a placeholder rather than a concrete dish ID in the OCR prompt example 3ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 110 ⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 肥牛金针菇 has expected result
+AssertionError: 肥牛金针菇 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 黑椒牛柳 has expected result
+AssertionError: 黑椒牛柳 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 卤牛腱 has expected result
+AssertionError: 卤牛腱 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 牛仔骨煲 has expected result
+AssertionError: 牛仔骨煲 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 红烧牛杂 has expected result
+AssertionError: 红烧牛杂 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 牛尾汤 has expected result
+AssertionError: 牛尾汤 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 葱爆牛筋 has expected result
+AssertionError: 葱爆牛筋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 卤牛肚 has expected result
+AssertionError: 卤牛肚 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 红烧肉 has expected result
+AssertionError: 红烧肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 东坡肉 has expected result
+AssertionError: 东坡肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 回锅肉 has expected result
+AssertionError: 回锅肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 清蒸狮子头 has expected result
+AssertionError: 清蒸狮子头 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 肉糜蒸蛋 has expected result
+AssertionError: 肉糜蒸蛋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 香煎里脊 has expected result
+AssertionError: 香煎里脊 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 梅菜扣肉 has expected result
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 梅菜扣肉 has expected result
+AssertionError: 梅菜扣肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 肉松饭团 has expected result
+AssertionError: 肉松饭团 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 肉末蒸豆腐 has expected result
+AssertionError: 肉末蒸豆腐 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 猪油拌饭 has expected result
+AssertionError: 猪油拌饭 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 猪肝汤 has expected result
+AssertionError: 猪肝汤 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 香菇青菜 has expected result
+AssertionError: 香菇青菜 + 肉馅: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 牛肉拌面 has expected result
+AssertionError: 牛肉拌面 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 清汤面 has expected result
+AssertionError: 清汤面 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 鸡丝面条 has expected result
+AssertionError: 鸡丝面条 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 手工拉面 has expected result
+AssertionError: 手工拉面 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 蒜香面包 has expected result
+AssertionError: 蒜香面包 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 白菜猪肉饺子 has expected result
+AssertionError: 白菜猪肉饺子 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 手工饺子皮 has expected result
+AssertionError: 手工饺子皮 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 鲜肉馄饨 has expected result
+AssertionError: 鲜肉馄饨 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 白馒头 has expected result
+AssertionError: 白馒头 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 叉烧包子 has expected result
+AssertionError: 叉烧包子 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 奶黄包 has expected result
+AssertionError: 奶黄包 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 葱油饼 has expected result
+AssertionError: 葱油饼 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 芝麻烧饼 has expected result
+AssertionError: 芝麻烧饼 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 葡式蛋挞 has expected result
+AssertionError: 葡式蛋挞 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 黄油可颂 has expected result
+AssertionError: 黄油可颂 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 肉夹馍 has expected result
+AssertionError: 肉夹馍 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 苏打饼干 has expected result
+AssertionError: 苏打饼干 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 小笼包 has expected result
+AssertionError: 小笼包 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 生煎包 has expected result
+AssertionError: 生煎包 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 玛格丽特披萨 has expected result
+AssertionError: 玛格丽特披萨 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[40/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 罗勒意面 has expected result
+AssertionError: 罗勒意面 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[41/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香煎面筋 has expected result
+AssertionError: 香煎面筋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[42/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 鲜虾烧麦 has expected result
+AssertionError: 鲜虾烧麦 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[43/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香脆油条 has expected result
+AssertionError: 香脆油条 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[44/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 酱油炒饭 has expected result
+AssertionError: 酱油炒饭 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[45/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 蔬菜意面 has expected result
+AssertionError: 蔬菜意面 + pasta: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[46/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 鸡肉沙拉 has expected result
+AssertionError: 鸡肉沙拉 + noodle: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[47/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 烤蔬菜 has expected result
+AssertionError: 烤蔬菜 + bread: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[48/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 海鲜拼盘 has expected result
+AssertionError: 海鲜拼盘 + flour: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[49/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香煎鳕鱼 has expected result
+AssertionError: 香煎鳕鱼 + soy sauce: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[50/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 脆皮鸡 has expected result
+AssertionError: 脆皮鸡 + 面饼: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[51/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 海鲜炒饭 has expected result
+AssertionError: 海鲜炒饭 + pizza: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[52/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 燕麦拿铁 has expected result
+AssertionError: 燕麦拿铁 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[53/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 卡布奇诺 has expected result
+AssertionError: 卡布奇诺 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[54/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 香草冰淇淋 has expected result
+AssertionError: 香草冰淇淋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[55/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 番茄浓汤 has expected result
+AssertionError: 番茄浓汤 + cream: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[56/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 烤面包 has expected result
+AssertionError: 烤面包 + cheese: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[57/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 西式煎饼 has expected result
+AssertionError: 西式煎饼 + butter: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[58/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 水果杯 has expected result
+AssertionError: 水果杯 + yogurt: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[59/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 咖啡 has expected result
+AssertionError: 咖啡 + latte: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[60/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 蛋白饮品 has expected result
+AssertionError: 蛋白饮品 + casein: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[61/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 提拉米苏 has expected result
+AssertionError: 提拉米苏 + mascarpone: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[62/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 焗通心粉 has expected result
+AssertionError: 焗通心粉 + ricotta: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[63/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 清蒸文蛤 has expected result
+AssertionError: 清蒸文蛤 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[64/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 清炒蛤 has expected result
+AssertionError: 清炒蛤 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[65/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 香辣田螺 has expected result
+AssertionError: 香辣田螺 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[66/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 蒜蓉海螺 has expected result
+AssertionError: 蒜蓉海螺 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[67/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 海胆蒸蛋 has expected result
+AssertionError: 海胆蒸蛋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[68/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 炒青菜 has expected result
+AssertionError: 炒青菜 + shrimp: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[69/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 烤鸡 has expected result
+AssertionError: 烤鸡 + prawn: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[70/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 咖喱饭 has expected result
+AssertionError: 咖喱饭 + crab: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[71/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 蔬菜汤 has expected result
+AssertionError: 蔬菜汤 + fish: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[72/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 烤饭团 has expected result
+AssertionError: 烤饭团 + salmon: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[73/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 炒面 has expected result
+AssertionError: 炒面 + squid: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[74/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 烤蔬菜 has expected result
+AssertionError: 烤蔬菜 + lobster: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[75/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 蔬菜汤 has expected result
+AssertionError: 蔬菜汤 + fish cake: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[76/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 寿司拼盘 has expected result
+AssertionError: 寿司拼盘 + fish roe: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[77/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 鸡蛋 / 蔬菜沙拉 has expected result
+AssertionError: 蔬菜沙拉 + mayonnaise: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[78/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 鸡蛋 / 火腿三明治 has expected result
+AssertionError: 火腿三明治 + mayo: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[79/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 花生 / 咖喱串烧 has expected result
+AssertionError: 咖喱串烧 + satay: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[80/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 鱼香茄子 has expected result
+AssertionError: 鱼香茄子 + : expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[81/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 魚香茄子 has expected result
+AssertionError: 魚香茄子 + : expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[82/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 鸡肉 / 番茄炒鸡蛋 has expected result
+AssertionError: 番茄炒鸡蛋 + : expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[83/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 鸡肉 / 番茄炒雞蛋 has expected result
+AssertionError: 番茄炒雞蛋 + : expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[84/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 椰奶咖啡 has expected result
+AssertionError: 椰奶咖啡 + : expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[85/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 紅燒肉 has expected result
+AssertionError: 紅燒肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[86/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 牛腩麵 has expected result
+AssertionError: 牛腩麵 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[87/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 瑪格麗特披薩 has expected result
+AssertionError: 瑪格麗特披薩 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[88/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 乳制品 / 卡布奇諾 has expected result
+AssertionError: 卡布奇諾 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[89/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 東坡肉 has expected result
+AssertionError: 東坡肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[90/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 回鍋肉 has expected result
+AssertionError: 回鍋肉 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[91/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 紅燒獅子頭 has expected result
+AssertionError: 紅燒獅子頭 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[92/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 猪肉 / 香煎裡脊 has expected result
+AssertionError: 香煎裡脊 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[93/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 牛肉 / 紅燒牛雜 has expected result
+AssertionError: 紅燒牛雜 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[94/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 牛肉拌麵 has expected result
+AssertionError: 牛肉拌麵 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[95/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 手工饅頭 has expected result
+AssertionError: 手工饅頭 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[96/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香煎麵餅 has expected result
+AssertionError: 香煎麵餅 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[97/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 羅勒意麵 has expected result
+AssertionError: 羅勒意麵 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[98/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香煎麵筋 has expected result
+AssertionError: 香煎麵筋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[99/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 醬油炒飯 has expected result
+AssertionError: 醬油炒飯 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[100/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 鮮蝦燒麥 has expected result
+AssertionError: 鮮蝦燒麥 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[101/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 麸质/小麦 / 香脆油條 has expected result
+AssertionError: 香脆油條 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[102/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > exclusion sample 海鲜 / 海膽蒸蛋 has expected result
+AssertionError: 海膽蒸蛋 + : expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/fix2.test.ts:265:79
+    263|     const dish = makeDish(`${name}-${dishName}`, dishName, ingredients…
+    264|     const candidates = rankDishes([dish], { ...profile, excludedIngred…
+    265|     expect(candidates.length === 0, `${dishName} + ${ingredients.join(…
+       |                                                                               ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[103/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > shows each exclusion category's expanded matching terms beside its preference label
+AssertionError: expected '"use client";\r\n\r\nimport { useRef,…' to contain '将同时排除：'
+
+- Expected
++ Received
+
+- 将同时排除：
++ "use client";
++ 
++ import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
++ import { mergeMenuItems, recordDishFeedback, useMoodMenuStore, type HistoryEntry } from "@/lib/store";
++ import { DishSchema, type Dish, type Mood } from "@/lib/schemas";
++ import { createId } from "@/lib/ids";
++ import { compressImage } from "@/lib/image";
++ import { parseIngredientInput } from "@/lib/ingredients";
++ import { photoPickerProps } from "@/lib/photo-picker";
++ 
++ type View = "home" | "menu" | "preferences" | "context" | "recommendations" | "history";
++ type Candidate = { dish: Dish; score: number; reasons: string[] };
++ type Result = { recommendation: Candidate | null; candidates: Candidate[]; reason: string };
++ 
++ const nav: { id: View; label: string; icon: string }[] = [
++   { id: "home", label: "首页", icon: "⌂" },
++   { id: "menu", label: "我的菜单", icon: "▤" },
++   { id: "preferences", label: "饮食偏好", icon: "♡" },
++   { id: "context", label: "此刻情境", icon: "☼" },
++   { id: "recommendations", label: "为我推荐", icon: "✳" },
++   { id: "history", label: "点单记忆", icon: "◷" },
++ ];
++ 
++ const demoMenu: Dish[] = [
++   { id: "demo-noodle", name: "番茄鸡蛋面", description: "汤面", price: 26, currency: "¥", ingredients: ["番茄", "鸡蛋", "小麦"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++   { id: "demo-tofu", name: "香菇豆腐煲", description: "砂锅热菜", price: 32, currency: "¥", ingredients: ["豆腐", "香菇"], ingredientsKnown: true, spicyLevel: "mild", confidence: 1, verifiedByUser: true },
++   { id: "demo-beef", name: "红烧牛肉饭", description: "米饭套餐", price: 42, currency: "¥", ingredients: ["牛肉", "米饭"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++   { id: "demo-salad", name: "田园蔬菜沙拉", description: "清爽时蔬", price: 29, currency: "¥", ingredients: ["生菜", "玉米"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++ ];
++ 
++ const moods: Mood[] = ["想吃点暖的", "清爽轻盈", "犒劳自己", "快速填饱", "随心看看"];
++ 
++ function formatPrice(dish: Dish) {
++   return dish.price === null ? "价格未知" : `${dish.currency}${dish.price}`;
++ }
++ 
++ function AppShell() {
++   const { state, update, ready } = useMoodMenuStore();
++   const [view, setView] = useState<View>("home");
++   const [busy, setBusy] = useState(false);
++   const [notice, setNotice] = useState("");
++   const [result, setResult] = useState<Result | null>(null);
++   const [photoError, setPhotoError] = useState("");
++   const [excludedInput, setExcludedInput] = useState("");
++   const [favoriteInput, setFavoriteInput] = useState("");
++   const [manualName, setManualName] = useState("");
++   const [manualPrice, setManualPrice] = useState("");
++   const [ingredientDrafts, setIngredientDrafts] = useState<Record<string, string>>({});
++   const photoInput = useRef<HTMLInputElement>(null);
++   const current = result?.recommendation?.dish;
++ 
++   async function recognizePhotos(event: ChangeEvent<HTMLInputElement>) {
++     const files = Array.from(event.target.files ?? []);
++     let compressionFailures = 0;
++     setPhotoError("");
++     if (!files.length) return;
++     if (files.length > 5) {
++       setPhotoError("一次最多上传 5 张菜单照片。");
++       event.target.value = "";
++       return;
++     }
++     if (files.some((file) => !["image/jpeg", "image/png", "image/webp"].includes(file.type))) {
++       setPhotoError("仅支持 JPG、PNG 或 WebP 图片。");
++       event.target.value = "";
++       return;
++     }
++     setBusy(true);
++     try {
++       const prepared = await Promise.all(files.map((file) => compressImage(file)));
++       compressionFailures = prepared.filter(({ failed }) => failed).length;
++       const uploadFiles = prepared.map(({ file }) => file);
++       if (uploadFiles.some((file) => file.size > 5 * 1024 * 1024)
++         || uploadFiles.reduce((sum, file) => sum + file.size, 0) > 10 * 1024 * 1024) {
++         throw new Error("压缩后的照片仍超过限制（单张 5 MB，合计 10 MB）。");
++       }
++       const formData = new FormData();
++       uploadFiles.forEach((file) => formData.append("photos", file));
++       const response = await fetch("/api/menu", { method: "POST", body: formData });
++       const payload = await response.json() as { menu?: { items?: Dish[] }; error?: string; omittedUnclear?: number; discardedCount?: number };
++       if (!response.ok) throw new Error(payload.error ?? "菜单识别失败。");
++       const parsed = DishSchema.array().safeParse(payload.menu?.items);
++       if (!parsed.success) throw new Error("识别结果格式不正确。");
++       update({ menu: { items: mergeMenuItems(state.menu.items, parsed.data) } });
++       setNotice(parsed.data.length === 0
++         ? `没有清晰到足以确认的菜品文字，模糊内容未加入菜单。请重拍或手动录入。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`
++         : `已读取 ${parsed.data.length} 道清晰菜单文字${payload.omittedUnclear ? `，另有 ${payload.omittedUnclear} 项模糊内容未加入` : ""}${payload.discardedCount ? `，${payload.discardedCount} 项格式不完整已丢弃` : ""}；请逐项核对后再使用。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
++     } catch (error) {
++       const message = error instanceof Error ? error.message : "菜单识别失败。";
++       setPhotoError(`${message}${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
++     } finally {
++       setBusy(false);
++       event.target.value = "";
++     }
++   }
++ 
++   async function getRecommendation(excludedDishIds: string[] = []) {
++     setBusy(true);
++     setView("recommendations");
++     setNotice("");
++     try {
++       const response = await fetch("/api/recommend", {
++         method: "POST",
++         headers: { "Content-Type": "application/json" },
++         body: JSON.stringify({
++           dishes: state.menu.items,
++           profile: state.profile,
++           mood: state.mood,
++           context: state.context,
++           refinement: state.refinement,
++           rejectedDishIds: state.rejectedDishIds,
++           excludedDishIds,
++         }),
++       });
++       const payload = await response.json() as Result | { error: string };
++       if (!response.ok || !("recommendation" in payload)) throw new Error("error" in payload ? payload.error : "推荐暂时不可用。");
++       const next = payload as Result;
++       setResult(next);
++       if (next.recommendation) {
++         const entry: HistoryEntry = {
++           id: `${Date.now()}-${next.recommendation.dish.id}`,
++           dish: next.recommendation.dish,
++           reason: next.recommendation.reasons.join("；"),
++           mood: state.mood,
++           createdAt: new Date().toISOString(),
++         };
++         update({ history: [entry, ...state.history].slice(0, 100) });
++       }
++     } catch (error) {
++       setNotice(error instanceof Error ? error.message : "推荐暂时不可用。");
++     } finally {
++       setBusy(false);
++     }
++   }
++ 
++   function chooseCandidate(candidate: Candidate) {
++     const entry: HistoryEntry = {
++       id: `${Date.now()}-${candidate.dish.id}`,
++       dish: candidate.dish,
++       reason: candidate.reasons.join("；"),
++       mood: state.mood,
++       createdAt: new Date().toISOString(),
++     };
++     setResult((previous) => previous ? { ...previous, recommendation: candidate, reason: "从已过滤的安全候选中切换。" } : previous);
++     update({ history: [entry, ...state.history].slice(0, 100) });
++   }
++ 
++   function recordFeedback(feedback: "liked" | "rejected") {
++     if (!current) return;
++     const updatedState = recordDishFeedback(state, current, feedback);
++     if (feedback === "rejected") {
++       update(updatedState);
++       void getRecommendation([current.id]);
++       return;
++     }
++     update(updatedState);
++     setNotice("已记录这份喜欢。");
++   }
++ 
++   function updateDish(id: string, patch: Partial<Dish>) {
++     update({ menu: { items: state.menu.items.map((dish) => dish.id === id ? { ...dish, ...patch, verifiedByUser: true } : dish) } });
++   }
++ 
++   function commitIngredients(dish: Dish, value: string) {
++     updateDish(dish.id, {
++       ingredients: parseIngredientInput(value),
++       ingredientsKnown: parseIngredientInput(value).length > 0,
++     });
++     setIngredientDrafts((drafts) => {
++       const next = { ...drafts };
++       delete next[dish.id];
++       return next;
++     });
++   }
++ 
++   function addManualDish(event: FormEvent<HTMLFormElement>) {
++     event.preventDefault();
++     const name = manualName.trim();
++     if (!name) return;
++     const parsedPrice = manualPrice.trim() ? Number(manualPrice) : null;
++     if (parsedPrice !== null && (!Number.isFinite(parsedPrice) || parsedPrice < 0)) {
++       setNotice("价格需为 0 或更大的数字，未知时请留空。");
++       return;
++     }
++     const dish: Dish = {
++       id: createId("manual"),
++       name,
++       description: "",
++       price: parsedPrice,
++       currency: state.profile.currency,
++       ingredients: [],
++       ingredientsKnown: false,
++       spicyLevel: "unknown",
++       confidence: 1,
++       verifiedByUser: true,
++     };
++     update({ menu: { items: [...state.menu.items, dish] } });
++     setManualName("");
++     setManualPrice("");
++     setNotice("已加入手动录入的菜品；未提供的信息仍保持未知。");
++   }
++ 
++   function addListValue(key: "excludedIngredients" | "favoriteIngredients", value: string, clear: () => void) {
++     const item = value.trim();
++     if (!item) return;
++     update({ profile: { ...state.profile, [key]: [...new Set([...state.profile[key], item])] } });
++     clear();
++   }
++ 
++   if (!ready) return <div className="loading-screen">正在打开你的菜单…</div>;
++ 
++   return (
++     <main className="app-shell">
++       <aside className="sidebar">
++         <button className="brand" onClick={() => setView("home")} aria-label="回到首页">
++           <span className="brand-mark">m.</span><span>MoodMenu<small>一餐一心情</small></span>
++         </button>
++         <div className="nav-label">你的空间</div>
++         <nav className="side-nav">
++           {nav.map((item) => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} onClick={() => setView(item.id)}>
++             <span className="nav-icon">{item.icon}</span>{item.label}{item.id === "menu" && state.menu.items.length > 0 && <span className="nav-count">{state.menu.items.length}</span>}
++           </button>)}
++         </nav>
++         <div className="sidebar-note"><span>✦</span><p>从真实菜单出发，<br />只推荐你能确认的。</p><small>你的数据只保存在本机浏览器</small></div>
++         <div className="sidebar-footer">M O O D M E N U <span>✳</span> 2026</div>
++       </aside>
++ 
++       <section className="main-column">
++         <header className="topbar"><span className="today-label">YOUR LITTLE FOOD COMPANION</span><span className="local-badge"><i /> 本机记忆已开启</span></header>
++         {notice && <div className="notice" role="status">{notice}<button onClick={() => setNotice("")} aria-label="关闭提示">×</button></div>}
++         {view === "home" && state.recoveryNotice && <div className="notice storage-notice" role="status">{state.recoveryNotice}</div>}
++ 
++         {view === "home" && <div className="page home-page">
++           <div className="hero">
++             <div className="hero-copy"><span className="eyebrow">给此刻的你，一点好胃口</span><h1>今天的心情，<br /><em>想吃点什么？</em></h1>
++               <p>从你手边的真实菜单开始。告诉我你的偏好，让这一餐更合心意。</p>
++               <button className="primary-button" onClick={() => setView("menu")}>添加一份菜单 <span>↗</span></button>
++               <div className="hero-footnote"><span>01</span> 拍下菜单　·　告诉我心情　·　找到心头好</div>
++             </div>
++             <div className="hero-art" aria-hidden="true"><div className="sun-disc" /><div className="plate"><div className="food"><i /><i /><i /><i /><i /></div></div><div className="leaf leaf-one" /><div className="leaf leaf-two" /><span className="art-note">慢慢吃<br />刚刚好</span></div>
++             <div className="hero-index">THE DAILY<br />MENU <b>✳</b></div>
++           </div>
++ 
++           <div className="section-heading"><div><span className="eyebrow">THE FIRST LITTLE STEP</span><h2>先告诉我一点点</h2></div><span className="section-count">01 — 03</span></div>
++           <div className="quick-grid">
++             <button className="quick-card" onClick={() => setView("menu")}><span className="quick-icon peach">▤</span><span className="quick-copy"><b>添加你的菜单</b><small>{state.menu.items.length ? `${state.menu.items.length} 道菜已准备好` : "拍照识别，或手动录入"}</small></span><span className="arrow">↗</span></button>
++             <button className="quick-card" onClick={() => setView("preferences")}><span className="quick-icon sage">♡</span><span className="quick-copy"><b>设定饮食偏好</b><small>{state.profile.excludedIngredients.length ? `${state.profile.excludedIngredients.length} 项避开` : "忌口、预算、喜欢的食材"}</small></span><span className="arrow">↗</span></button>
++             <button className="quick-card" onClick={() => setView("context")}><span className="quick-icon lavender">☼</span><span className="quick-copy"><b>说说现在的心情</b><small>{state.mood} · 随时可以改变</small></span><span className="arrow">↗</span></button>
++           </div>
++           <div className="home-bottom"><div><span className="eyebrow">A GENTLE REMINDER</span><p>过敏原信息不完整时，请直接向餐厅确认。<br />识别和推荐都不是食品安全保证。</p></div><span className="flower-mark">✳</span></div>
++         </div>}
++ 
++         {view === "menu" && <div className="page">
++           <div className="page-title"><span className="eyebrow">YOUR REAL MENU</span><h1>把菜单，交给我看看</h1><p>拍摄餐厅菜单，识别后可逐项校对、修改或删除。模糊的内容不会被猜出来。</p></div>
++           <section className="upload-card">
++             <input ref={photoInput} className="visually-hidden" type="file" {...photoPickerProps} onChange={recognizePhotos} />
++             <span className="upload-icon">↑</span><h2>{busy ? "正在读取菜单…" : "拍照或上传菜单照片"}</h2><p>支持 JPG、PNG、WebP · 最多 5 张 · 单张 ≤ 5 MB</p>
++             <button className="primary-button" disabled={busy} onClick={() => photoInput.current?.click()}>{busy ? "请稍等" : "选择照片"} <span>↗</span></button>
++             {photoError && <p className="inline-error" role="alert">{photoError}</p>}
++             <div className="privacy-caption">照片仅用于这次识别，不会作为公共示例菜单展示。</div>
++           </section>
++           <div className="manual-row"><div><span className="eyebrow">OR ADD IT YOURSELF</span><h2>手动录入一道菜</h2></div>
++             <form className="manual-form" onSubmit={addManualDish}><input aria-label="菜名" placeholder="菜名" value={manualName} onChange={(e) => setManualName(e.target.value)} maxLength={120} required /><input aria-label="价格" placeholder="价格（可留空）" type="number" min="0" step="0.01" value={manualPrice} onChange={(e) => setManualPrice(e.target.value)} /><button className="outline-button" type="submit">＋ 添加</button></form>
++           </div>
++           <div className="demo-banner"><div><span className="eyebrow">SEPARATE SAMPLE MENU</span><b>只想先试试？使用独立示例菜单</b><small>演示菜品全部明确标记为示例，绝非照片识别结果。</small></div><button className="outline-button" onClick={() => { update({ menu: { items: demoMenu } }); setNotice("已载入独立的示例菜单，不是照片识别结果。"); }}>载入示例菜单 ↗</button></div>
++           <section className="menu-list-section"><div className="section-heading"><div><span className="eyebrow">CHECK BEFORE YOU CHOOSE</span><h2>菜单上的菜 <span className="count-pill">{state.menu.items.length}</span></h2></div>{state.menu.items.length > 0 && <button className="text-button" onClick={() => { update({ menu: { items: [] } }); setResult(null); }}>清空菜单</button>}</div>
++             {state.menu.items.length === 0 ? <div className="empty-card"><span>▤</span><b>你的菜单还空空的</b><small>上传照片、手动录入，或选择上方的独立示例菜单。</small></div> : <div className="dish-table">
++               <div className="table-head"><span>菜品 / 核对信息</span><span>价格</span><span>操作</span></div>
++               {state.menu.items.map((dish) => <div className="dish-row" key={dish.id}><div className="dish-name-cell"><input aria-label="菜名" value={dish.name} onChange={(e) => updateDish(dish.id, { name: e.target.value })} maxLength={120} /><small>{dish.ingredientsKnown ? `食材：${dish.ingredients.join("、") || "待核对"}` : "食材未知 · 请向餐厅确认"}{dish.confidence < 0.75 ? " · 识别信心较低，请核对" : ""}</small><div className="ingredient-edit"><input aria-label="食材列表" value={ingredientDrafts[dish.id] ?? dish.ingredients.join(", ")} onChange={(e) => setIngredientDrafts((drafts) => ({ ...drafts, [dish.id]: e.target.value }))} onBlur={(e) => commitIngredients(dish, e.currentTarget.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); commitIngredients(dish, e.currentTarget.value); } }} placeholder="补充食材（逗号分隔，未知留空）" /><select aria-label="辣度" value={dish.spicyLevel} onChange={(e) => updateDish(dish.id, { spicyLevel: e.target.value as Dish["spicyLevel"] })}><option value="unknown">辣度未知</option><option value="none">不辣</option><option value="mild">微辣</option><option value="medium">中辣</option><option value="hot">很辣</option></select></div></div><div><input className="price-input" aria-label="菜品价格" type="number" min="0" step="0.01" placeholder="未知" value={dish.price ?? ""} onChange={(e) => updateDish(dish.id, { price: e.target.value ? Number(e.target.value) : null })} /></div><button className="delete-button" aria-label={`删除${dish.name}`} onClick={() => update({ menu: { items: state.menu.items.filter((item) => item.id !== dish.id) } })}>删除</button></div>)}
++             </div>}
++             {state.menu.items.length > 0 && <div className="safety-note">⚠ 菜单文字和配料可能有遗漏。请人工核实；这不是过敏原安全保证。</div>}
++           </section>
++         </div>}
++ 
++         {view === "preferences" && <div className="page">
++           <div className="page-title"><span className="eyebrow">A LITTLE MORE ABOUT YOU</span><h1>让喜欢和忌口，<br />都有被听见的地方</h1><p>这些偏好只保存在你的设备上，也会在每次推荐前硬性过滤。</p></div>
++           <section className="form-card"><label className="field-label" htmlFor="budget">每餐预算上限</label><p className="field-hint">开启后，只有明确标注价格且不超预算的菜品会进入推荐。</p><div className="budget-row"><select value={state.profile.currency} aria-label="货币单位" onChange={(e) => update({ profile: { ...state.profile, currency: e.target.value } })}><option>¥</option><option>$</option><option>€</option><option>元</option></select><input id="budget" type="number" min="0" step="1" placeholder="不设预算" value={state.profile.budget ?? ""} onChange={(e) => update({ profile: { ...state.profile, budget: e.target.value ? Number(e.target.value) : null } })} /><span>每餐</span></div>
++             <div className="field-divider" /><label className="field-label">需要避开的食材</label><p className="field-hint">只有菜单里明确标注的食材能用于过滤，未注明的配料无法保证。</p><div className="token-form"><input value={excludedInput} onChange={(e) => setExcludedInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("excludedIngredients", excludedInput, () => setExcludedInput("")); } }} placeholder="输入食材，例如：花生" /><button className="outline-button" onClick={() => addListValue("excludedIngredients", excludedInput, () => setExcludedInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.excludedIngredients.map((item) => <button className="token danger-token" key={item} onClick={() => update({ profile: { ...state.profile, excludedIngredients: state.profile.excludedIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
++             <div className="field-divider" /><label className="field-label">喜欢的食材</label><div className="token-form"><input value={favoriteInput} onChange={(e) => setFavoriteInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput("")); } }} placeholder="输入喜欢的食材，例如：番茄" /><button className="outline-button" onClick={() => addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.favoriteIngredients.map((item) => <button className="token" key={item} onClick={() => update({ profile: { ...state.profile, favoriteIngredients: state.profile.favoriteIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
++             <div className="field-divider" /><label className="field-label" htmlFor="diet-notes">其他饮食习惯</label><textarea id="diet-notes" className="notes-area" maxLength={500} placeholder="例如：今天想吃清淡一点（只作为参考，不会替代硬性忌口）" value={state.profile.dietaryNotes} onChange={(e) => update({ profile: { ...state.profile, dietaryNotes: e.target.value } })} /><div className="safety-note">对严重过敏、交叉接触或无法明确确认的配料，请直接联系餐厅。我们不会声称任何一道菜一定安全。</div>
++           </section>
++         </div>}
++ 
++         {view === "context" && <div className="page">
++           <div className="page-title"><span className="eyebrow">HOW ARE YOU, REALLY?</span><h1>说说此刻，<br /><em>是什么心情</em></h1><p>心情和小小的当下情境可以改变偏好，但不会覆盖你的饮食限制。</p></div>
++           <section className="form-card mood-card"><span className="field-label">此刻最想要的感觉</span><div className="mood-options">{moods.map((mood, index) => <button key={mood} className={state.mood === mood ? "mood-option selected" : "mood-option"} onClick={() => update({ mood })}><span>{["♨", "❋", "✧", "◷", "♡"][index]}</span>{mood}{state.mood === mood && <i>✓</i>}</button>)}</div>
++             <div className="field-divider" /><label className="field-label" htmlFor="context-note">补充一点情境（选填）</label><p className="field-hint">只会作为温和的排序参考，不会变成硬性健康或安全判断。</p><textarea id="context-note" className="notes-area" maxLength={240} placeholder="比如：下雨了，想吃热乎的；午休时间比较短…" value={state.context} onChange={(e) => update({ context: e.target.value })} /><div className="context-tip"><span>✳</span><p>天气只是可选参考。天气服务失效时，推荐仍会照常进行。</p></div>
++           </section>
++           <button className="primary-button page-cta" onClick={() => void getRecommendation()}>按此刻的心情推荐 <span>↗</span></button>
++         </div>}
++ 
++         {view === "recommendations" && <div className="page">
++           <div className="page-title"><span className="eyebrow">MADE FOR THIS MOMENT</span><h1>今天，为你挑一道</h1><p>心情：{state.mood}{state.context ? ` · ${state.context}` : ""}　<span className="dot-divider">/</span>　硬性限制优先于所有偏好</p></div>
++           {busy && <div className="empty-card loading-card"><span>✳</span><b>正在认真挑选…</b><small>先过滤硬性限制，再从真实候选中排序。</small></div>}
++           {!busy && result?.recommendation && <section className="recommendation-card"><div className="rec-kicker"><span>✳ 今日这份心意</span><span>来自你的真实菜单</span></div><h2>{result.recommendation.dish.name}</h2><div className="rec-price">{formatPrice(result.recommendation.dish)}</div><p className="rec-reason">{result.recommendation.reasons.join(" · ")}</p><div className="rec-tags"><span>{state.mood}</span>{result.recommendation.dish.spicyLevel === "unknown" && <span>辣度未知</span>}{!result.recommendation.dish.ingredientsKnown && <span>配料未知</span>}</div><div className="allergen-warning"><b>关于过敏原</b><p>菜单可能没有列出全部配料或交叉接触信息。请向餐厅确认；此推荐不是安全保证。</p></div><div className="feedback-actions"><button className="primary-button" onClick={() => recordFeedback("liked")}>这道我喜欢 ♡</button><button className="outline-button" onClick={() => recordFeedback("rejected")}>换一道 ↗</button></div><p className="fallback-note">{result.reason}</p></section>}
++           {!busy && result && !result.recommendation && <div className="empty-card"><span>☼</span><b>这次没有合适的候选</b><small>{result.reason}</small><button className="outline-button" onClick={() => setView("menu")}>核对菜单</button></div>}
++           {!busy && !result && <div className="empty-card"><span>✳</span><b>还没有开始今天的挑选</b><small>准备好菜单和偏好后，我们再一起看看。</small><button className="primary-button" onClick={() => void getRecommendation()}>开始推荐 ↗</button></div>}
++           {result?.candidates && result.candidates.length > 1 && <div className="other-candidates"><span className="eyebrow">ALSO ON YOUR MENU</span><div>{result.candidates.filter((candidate) => candidate.dish.id !== current?.id).slice(0, 4).map((candidate) => <button key={candidate.dish.id} onClick={() => chooseCandidate(candidate)}><span>{candidate.dish.name}</span><small>{formatPrice(candidate.dish)}</small></button>)}</div></div>}
++           <section className="refine-card"><label htmlFor="refinement" className="field-label">还想微调一下？</label><p className="field-hint">说说你现在的口味。预算和忌口仍会优先保留。</p><div className="refine-row"><input id="refinement" value={state.refinement} maxLength={240} onChange={(e) => update({ refinement: e.target.value })} placeholder="比如：微辣就好，或想吃点热的" onKeyDown={(e) => { if (e.key === "Enter") void getRecommendation(); }} /><button className="outline-button" disabled={busy} onClick={() => void getRecommendation()}>重新挑选 ↗</button></div></section>
++         </div>}
++ 
++         {view === "history" && <div className="page">
++           <div className="page-title"><span className="eyebrow">A LITTLE FOOD MEMORY</span><h1>每一餐，都是一点点了解</h1><p>浏览过的推荐和你的反馈都会留在本机，帮下一次的选择慢慢更合心意。</p></div>
++           <section className="history-summary"><div><b>{state.history.length}</b><span>次推荐记录</span></div><div><b>{state.profile.favoriteIngredients.length}</b><span>份喜欢的食材</span></div><div><b>{state.rejectedDishIds.length}</b><span>已避开的菜品</span></div></section>
++           {state.history.length === 0 ? <div className="empty-card"><span>◷</span><b>还没有点单记忆</b><small>获得第一份推荐后，记录会出现在这里。</small><button className="primary-button" onClick={() => setView("recommendations")}>去看看菜单 ↗</button></div> : <div className="history-list">{state.history.map((entry) => <article key={entry.id} className="history-item"><span className="history-date">{new Date(entry.createdAt).toLocaleDateString("zh-CN", { month: "short", day: "numeric" })}</span><div><b>{entry.dish.name}</b><small>{entry.mood} · {formatPrice(entry.dish)}</small><p>{entry.reason}</p></div><span className={`feedback-mark ${entry.feedback ?? ""}`}>{entry.feedback === "liked" ? "喜欢" : entry.feedback === "rejected" ? "不喜欢" : "已推荐"}</span></article>)}</div>}
++           <button className="text-button clear-memory" onClick={() => { update({ history: [], rejectedDishIds: [] }); setResult(null); }}>清除本机记录与长期记忆</button>
++         </div>}
++ 
++         <footer className="page-footer"><span>用一点点心意，找到此刻的刚刚好。</span><span>过敏原请向餐厅确认 · 不作安全保证</span></footer>
++       </section>
++       <nav className="mobile-nav" aria-label="主导航">{nav.map((item) => <button key={item.id} className={view === item.id ? "mobile-nav-item active" : "mobile-nav-item"} onClick={() => setView(item.id)}><span>{item.icon}</span><small>{item.id === "preferences" ? "偏好" : item.id === "recommendations" ? "推荐" : item.id === "history" ? "记忆" : item.id === "context" ? "心情" : item.id === "menu" ? "菜单" : "首页"}</small></button>)}</nav>
++     </main>
++   );
++ }
++ 
++ export default function Home() {
++   return <AppShell />;
++ }
++
+
+ ❯ tests/fix2.test.ts:270:18
+    268|   it("shows each exclusion category's expanded matching terms beside i…
+    269|     const page = readFileSync(new URL("../app/page.tsx", import.meta.u…
+    270|     expect(page).toContain("将同时排除：");
+       |                  ^
+    271|     expect(page).toContain("getExclusionAliases");
+    272|     expect(getExclusionAliases("猪肉")).toContain("红烧肉");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[104/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 independent real-menu exclusion coverage > blocks adding an additional favorite after the 50-item limit with visible feedback
+AssertionError: expected '"use client";\r\n\r\nimport { useRef,…' to contain '偏爱食材最多 50 项'
+
+- Expected
++ Received
+
+- 偏爱食材最多 50 项
++ "use client";
++ 
++ import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
++ import { mergeMenuItems, recordDishFeedback, useMoodMenuStore, type HistoryEntry } from "@/lib/store";
++ import { DishSchema, type Dish, type Mood } from "@/lib/schemas";
++ import { createId } from "@/lib/ids";
++ import { compressImage } from "@/lib/image";
++ import { parseIngredientInput } from "@/lib/ingredients";
++ import { photoPickerProps } from "@/lib/photo-picker";
++ 
++ type View = "home" | "menu" | "preferences" | "context" | "recommendations" | "history";
++ type Candidate = { dish: Dish; score: number; reasons: string[] };
++ type Result = { recommendation: Candidate | null; candidates: Candidate[]; reason: string };
++ 
++ const nav: { id: View; label: string; icon: string }[] = [
++   { id: "home", label: "首页", icon: "⌂" },
++   { id: "menu", label: "我的菜单", icon: "▤" },
++   { id: "preferences", label: "饮食偏好", icon: "♡" },
++   { id: "context", label: "此刻情境", icon: "☼" },
++   { id: "recommendations", label: "为我推荐", icon: "✳" },
++   { id: "history", label: "点单记忆", icon: "◷" },
++ ];
++ 
++ const demoMenu: Dish[] = [
++   { id: "demo-noodle", name: "番茄鸡蛋面", description: "汤面", price: 26, currency: "¥", ingredients: ["番茄", "鸡蛋", "小麦"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++   { id: "demo-tofu", name: "香菇豆腐煲", description: "砂锅热菜", price: 32, currency: "¥", ingredients: ["豆腐", "香菇"], ingredientsKnown: true, spicyLevel: "mild", confidence: 1, verifiedByUser: true },
++   { id: "demo-beef", name: "红烧牛肉饭", description: "米饭套餐", price: 42, currency: "¥", ingredients: ["牛肉", "米饭"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++   { id: "demo-salad", name: "田园蔬菜沙拉", description: "清爽时蔬", price: 29, currency: "¥", ingredients: ["生菜", "玉米"], ingredientsKnown: true, spicyLevel: "none", confidence: 1, verifiedByUser: true },
++ ];
++ 
++ const moods: Mood[] = ["想吃点暖的", "清爽轻盈", "犒劳自己", "快速填饱", "随心看看"];
++ 
++ function formatPrice(dish: Dish) {
++   return dish.price === null ? "价格未知" : `${dish.currency}${dish.price}`;
++ }
++ 
++ function AppShell() {
++   const { state, update, ready } = useMoodMenuStore();
++   const [view, setView] = useState<View>("home");
++   const [busy, setBusy] = useState(false);
++   const [notice, setNotice] = useState("");
++   const [result, setResult] = useState<Result | null>(null);
++   const [photoError, setPhotoError] = useState("");
++   const [excludedInput, setExcludedInput] = useState("");
++   const [favoriteInput, setFavoriteInput] = useState("");
++   const [manualName, setManualName] = useState("");
++   const [manualPrice, setManualPrice] = useState("");
++   const [ingredientDrafts, setIngredientDrafts] = useState<Record<string, string>>({});
++   const photoInput = useRef<HTMLInputElement>(null);
++   const current = result?.recommendation?.dish;
++ 
++   async function recognizePhotos(event: ChangeEvent<HTMLInputElement>) {
++     const files = Array.from(event.target.files ?? []);
++     let compressionFailures = 0;
++     setPhotoError("");
++     if (!files.length) return;
++     if (files.length > 5) {
++       setPhotoError("一次最多上传 5 张菜单照片。");
++       event.target.value = "";
++       return;
++     }
++     if (files.some((file) => !["image/jpeg", "image/png", "image/webp"].includes(file.type))) {
++       setPhotoError("仅支持 JPG、PNG 或 WebP 图片。");
++       event.target.value = "";
++       return;
++     }
++     setBusy(true);
++     try {
++       const prepared = await Promise.all(files.map((file) => compressImage(file)));
++       compressionFailures = prepared.filter(({ failed }) => failed).length;
++       const uploadFiles = prepared.map(({ file }) => file);
++       if (uploadFiles.some((file) => file.size > 5 * 1024 * 1024)
++         || uploadFiles.reduce((sum, file) => sum + file.size, 0) > 10 * 1024 * 1024) {
++         throw new Error("压缩后的照片仍超过限制（单张 5 MB，合计 10 MB）。");
++       }
++       const formData = new FormData();
++       uploadFiles.forEach((file) => formData.append("photos", file));
++       const response = await fetch("/api/menu", { method: "POST", body: formData });
++       const payload = await response.json() as { menu?: { items?: Dish[] }; error?: string; omittedUnclear?: number; discardedCount?: number };
++       if (!response.ok) throw new Error(payload.error ?? "菜单识别失败。");
++       const parsed = DishSchema.array().safeParse(payload.menu?.items);
++       if (!parsed.success) throw new Error("识别结果格式不正确。");
++       update({ menu: { items: mergeMenuItems(state.menu.items, parsed.data) } });
++       setNotice(parsed.data.length === 0
++         ? `没有清晰到足以确认的菜品文字，模糊内容未加入菜单。请重拍或手动录入。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`
++         : `已读取 ${parsed.data.length} 道清晰菜单文字${payload.omittedUnclear ? `，另有 ${payload.omittedUnclear} 项模糊内容未加入` : ""}${payload.discardedCount ? `，${payload.discardedCount} 项格式不完整已丢弃` : ""}；请逐项核对后再使用。${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
++     } catch (error) {
++       const message = error instanceof Error ? error.message : "菜单识别失败。";
++       setPhotoError(`${message}${compressionFailures ? " 部分照片压缩失败，已回退原图。" : ""}`);
++     } finally {
++       setBusy(false);
++       event.target.value = "";
++     }
++   }
++ 
++   async function getRecommendation(excludedDishIds: string[] = []) {
++     setBusy(true);
++     setView("recommendations");
++     setNotice("");
++     try {
++       const response = await fetch("/api/recommend", {
++         method: "POST",
++         headers: { "Content-Type": "application/json" },
++         body: JSON.stringify({
++           dishes: state.menu.items,
++           profile: state.profile,
++           mood: state.mood,
++           context: state.context,
++           refinement: state.refinement,
++           rejectedDishIds: state.rejectedDishIds,
++           excludedDishIds,
++         }),
++       });
++       const payload = await response.json() as Result | { error: string };
++       if (!response.ok || !("recommendation" in payload)) throw new Error("error" in payload ? payload.error : "推荐暂时不可用。");
++       const next = payload as Result;
++       setResult(next);
++       if (next.recommendation) {
++         const entry: HistoryEntry = {
++           id: `${Date.now()}-${next.recommendation.dish.id}`,
++           dish: next.recommendation.dish,
++           reason: next.recommendation.reasons.join("；"),
++           mood: state.mood,
++           createdAt: new Date().toISOString(),
++         };
++         update({ history: [entry, ...state.history].slice(0, 100) });
++       }
++     } catch (error) {
++       setNotice(error instanceof Error ? error.message : "推荐暂时不可用。");
++     } finally {
++       setBusy(false);
++     }
++   }
++ 
++   function chooseCandidate(candidate: Candidate) {
++     const entry: HistoryEntry = {
++       id: `${Date.now()}-${candidate.dish.id}`,
++       dish: candidate.dish,
++       reason: candidate.reasons.join("；"),
++       mood: state.mood,
++       createdAt: new Date().toISOString(),
++     };
++     setResult((previous) => previous ? { ...previous, recommendation: candidate, reason: "从已过滤的安全候选中切换。" } : previous);
++     update({ history: [entry, ...state.history].slice(0, 100) });
++   }
++ 
++   function recordFeedback(feedback: "liked" | "rejected") {
++     if (!current) return;
++     const updatedState = recordDishFeedback(state, current, feedback);
++     if (feedback === "rejected") {
++       update(updatedState);
++       void getRecommendation([current.id]);
++       return;
++     }
++     update(updatedState);
++     setNotice("已记录这份喜欢。");
++   }
++ 
++   function updateDish(id: string, patch: Partial<Dish>) {
++     update({ menu: { items: state.menu.items.map((dish) => dish.id === id ? { ...dish, ...patch, verifiedByUser: true } : dish) } });
++   }
++ 
++   function commitIngredients(dish: Dish, value: string) {
++     updateDish(dish.id, {
++       ingredients: parseIngredientInput(value),
++       ingredientsKnown: parseIngredientInput(value).length > 0,
++     });
++     setIngredientDrafts((drafts) => {
++       const next = { ...drafts };
++       delete next[dish.id];
++       return next;
++     });
++   }
++ 
++   function addManualDish(event: FormEvent<HTMLFormElement>) {
++     event.preventDefault();
++     const name = manualName.trim();
++     if (!name) return;
++     const parsedPrice = manualPrice.trim() ? Number(manualPrice) : null;
++     if (parsedPrice !== null && (!Number.isFinite(parsedPrice) || parsedPrice < 0)) {
++       setNotice("价格需为 0 或更大的数字，未知时请留空。");
++       return;
++     }
++     const dish: Dish = {
++       id: createId("manual"),
++       name,
++       description: "",
++       price: parsedPrice,
++       currency: state.profile.currency,
++       ingredients: [],
++       ingredientsKnown: false,
++       spicyLevel: "unknown",
++       confidence: 1,
++       verifiedByUser: true,
++     };
++     update({ menu: { items: [...state.menu.items, dish] } });
++     setManualName("");
++     setManualPrice("");
++     setNotice("已加入手动录入的菜品；未提供的信息仍保持未知。");
++   }
++ 
++   function addListValue(key: "excludedIngredients" | "favoriteIngredients", value: string, clear: () => void) {
++     const item = value.trim();
++     if (!item) return;
++     update({ profile: { ...state.profile, [key]: [...new Set([...state.profile[key], item])] } });
++     clear();
++   }
++ 
++   if (!ready) return <div className="loading-screen">正在打开你的菜单…</div>;
++ 
++   return (
++     <main className="app-shell">
++       <aside className="sidebar">
++         <button className="brand" onClick={() => setView("home")} aria-label="回到首页">
++           <span className="brand-mark">m.</span><span>MoodMenu<small>一餐一心情</small></span>
++         </button>
++         <div className="nav-label">你的空间</div>
++         <nav className="side-nav">
++           {nav.map((item) => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} onClick={() => setView(item.id)}>
++             <span className="nav-icon">{item.icon}</span>{item.label}{item.id === "menu" && state.menu.items.length > 0 && <span className="nav-count">{state.menu.items.length}</span>}
++           </button>)}
++         </nav>
++         <div className="sidebar-note"><span>✦</span><p>从真实菜单出发，<br />只推荐你能确认的。</p><small>你的数据只保存在本机浏览器</small></div>
++         <div className="sidebar-footer">M O O D M E N U <span>✳</span> 2026</div>
++       </aside>
++ 
++       <section className="main-column">
++         <header className="topbar"><span className="today-label">YOUR LITTLE FOOD COMPANION</span><span className="local-badge"><i /> 本机记忆已开启</span></header>
++         {notice && <div className="notice" role="status">{notice}<button onClick={() => setNotice("")} aria-label="关闭提示">×</button></div>}
++         {view === "home" && state.recoveryNotice && <div className="notice storage-notice" role="status">{state.recoveryNotice}</div>}
++ 
++         {view === "home" && <div className="page home-page">
++           <div className="hero">
++             <div className="hero-copy"><span className="eyebrow">给此刻的你，一点好胃口</span><h1>今天的心情，<br /><em>想吃点什么？</em></h1>
++               <p>从你手边的真实菜单开始。告诉我你的偏好，让这一餐更合心意。</p>
++               <button className="primary-button" onClick={() => setView("menu")}>添加一份菜单 <span>↗</span></button>
++               <div className="hero-footnote"><span>01</span> 拍下菜单　·　告诉我心情　·　找到心头好</div>
++             </div>
++             <div className="hero-art" aria-hidden="true"><div className="sun-disc" /><div className="plate"><div className="food"><i /><i /><i /><i /><i /></div></div><div className="leaf leaf-one" /><div className="leaf leaf-two" /><span className="art-note">慢慢吃<br />刚刚好</span></div>
++             <div className="hero-index">THE DAILY<br />MENU <b>✳</b></div>
++           </div>
++ 
++           <div className="section-heading"><div><span className="eyebrow">THE FIRST LITTLE STEP</span><h2>先告诉我一点点</h2></div><span className="section-count">01 — 03</span></div>
++           <div className="quick-grid">
++             <button className="quick-card" onClick={() => setView("menu")}><span className="quick-icon peach">▤</span><span className="quick-copy"><b>添加你的菜单</b><small>{state.menu.items.length ? `${state.menu.items.length} 道菜已准备好` : "拍照识别，或手动录入"}</small></span><span className="arrow">↗</span></button>
++             <button className="quick-card" onClick={() => setView("preferences")}><span className="quick-icon sage">♡</span><span className="quick-copy"><b>设定饮食偏好</b><small>{state.profile.excludedIngredients.length ? `${state.profile.excludedIngredients.length} 项避开` : "忌口、预算、喜欢的食材"}</small></span><span className="arrow">↗</span></button>
++             <button className="quick-card" onClick={() => setView("context")}><span className="quick-icon lavender">☼</span><span className="quick-copy"><b>说说现在的心情</b><small>{state.mood} · 随时可以改变</small></span><span className="arrow">↗</span></button>
++           </div>
++           <div className="home-bottom"><div><span className="eyebrow">A GENTLE REMINDER</span><p>过敏原信息不完整时，请直接向餐厅确认。<br />识别和推荐都不是食品安全保证。</p></div><span className="flower-mark">✳</span></div>
++         </div>}
++ 
++         {view === "menu" && <div className="page">
++           <div className="page-title"><span className="eyebrow">YOUR REAL MENU</span><h1>把菜单，交给我看看</h1><p>拍摄餐厅菜单，识别后可逐项校对、修改或删除。模糊的内容不会被猜出来。</p></div>
++           <section className="upload-card">
++             <input ref={photoInput} className="visually-hidden" type="file" {...photoPickerProps} onChange={recognizePhotos} />
++             <span className="upload-icon">↑</span><h2>{busy ? "正在读取菜单…" : "拍照或上传菜单照片"}</h2><p>支持 JPG、PNG、WebP · 最多 5 张 · 单张 ≤ 5 MB</p>
++             <button className="primary-button" disabled={busy} onClick={() => photoInput.current?.click()}>{busy ? "请稍等" : "选择照片"} <span>↗</span></button>
++             {photoError && <p className="inline-error" role="alert">{photoError}</p>}
++             <div className="privacy-caption">照片仅用于这次识别，不会作为公共示例菜单展示。</div>
++           </section>
++           <div className="manual-row"><div><span className="eyebrow">OR ADD IT YOURSELF</span><h2>手动录入一道菜</h2></div>
++             <form className="manual-form" onSubmit={addManualDish}><input aria-label="菜名" placeholder="菜名" value={manualName} onChange={(e) => setManualName(e.target.value)} maxLength={120} required /><input aria-label="价格" placeholder="价格（可留空）" type="number" min="0" step="0.01" value={manualPrice} onChange={(e) => setManualPrice(e.target.value)} /><button className="outline-button" type="submit">＋ 添加</button></form>
++           </div>
++           <div className="demo-banner"><div><span className="eyebrow">SEPARATE SAMPLE MENU</span><b>只想先试试？使用独立示例菜单</b><small>演示菜品全部明确标记为示例，绝非照片识别结果。</small></div><button className="outline-button" onClick={() => { update({ menu: { items: demoMenu } }); setNotice("已载入独立的示例菜单，不是照片识别结果。"); }}>载入示例菜单 ↗</button></div>
++           <section className="menu-list-section"><div className="section-heading"><div><span className="eyebrow">CHECK BEFORE YOU CHOOSE</span><h2>菜单上的菜 <span className="count-pill">{state.menu.items.length}</span></h2></div>{state.menu.items.length > 0 && <button className="text-button" onClick={() => { update({ menu: { items: [] } }); setResult(null); }}>清空菜单</button>}</div>
++             {state.menu.items.length === 0 ? <div className="empty-card"><span>▤</span><b>你的菜单还空空的</b><small>上传照片、手动录入，或选择上方的独立示例菜单。</small></div> : <div className="dish-table">
++               <div className="table-head"><span>菜品 / 核对信息</span><span>价格</span><span>操作</span></div>
++               {state.menu.items.map((dish) => <div className="dish-row" key={dish.id}><div className="dish-name-cell"><input aria-label="菜名" value={dish.name} onChange={(e) => updateDish(dish.id, { name: e.target.value })} maxLength={120} /><small>{dish.ingredientsKnown ? `食材：${dish.ingredients.join("、") || "待核对"}` : "食材未知 · 请向餐厅确认"}{dish.confidence < 0.75 ? " · 识别信心较低，请核对" : ""}</small><div className="ingredient-edit"><input aria-label="食材列表" value={ingredientDrafts[dish.id] ?? dish.ingredients.join(", ")} onChange={(e) => setIngredientDrafts((drafts) => ({ ...drafts, [dish.id]: e.target.value }))} onBlur={(e) => commitIngredients(dish, e.currentTarget.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); commitIngredients(dish, e.currentTarget.value); } }} placeholder="补充食材（逗号分隔，未知留空）" /><select aria-label="辣度" value={dish.spicyLevel} onChange={(e) => updateDish(dish.id, { spicyLevel: e.target.value as Dish["spicyLevel"] })}><option value="unknown">辣度未知</option><option value="none">不辣</option><option value="mild">微辣</option><option value="medium">中辣</option><option value="hot">很辣</option></select></div></div><div><input className="price-input" aria-label="菜品价格" type="number" min="0" step="0.01" placeholder="未知" value={dish.price ?? ""} onChange={(e) => updateDish(dish.id, { price: e.target.value ? Number(e.target.value) : null })} /></div><button className="delete-button" aria-label={`删除${dish.name}`} onClick={() => update({ menu: { items: state.menu.items.filter((item) => item.id !== dish.id) } })}>删除</button></div>)}
++             </div>}
++             {state.menu.items.length > 0 && <div className="safety-note">⚠ 菜单文字和配料可能有遗漏。请人工核实；这不是过敏原安全保证。</div>}
++           </section>
++         </div>}
++ 
++         {view === "preferences" && <div className="page">
++           <div className="page-title"><span className="eyebrow">A LITTLE MORE ABOUT YOU</span><h1>让喜欢和忌口，<br />都有被听见的地方</h1><p>这些偏好只保存在你的设备上，也会在每次推荐前硬性过滤。</p></div>
++           <section className="form-card"><label className="field-label" htmlFor="budget">每餐预算上限</label><p className="field-hint">开启后，只有明确标注价格且不超预算的菜品会进入推荐。</p><div className="budget-row"><select value={state.profile.currency} aria-label="货币单位" onChange={(e) => update({ profile: { ...state.profile, currency: e.target.value } })}><option>¥</option><option>$</option><option>€</option><option>元</option></select><input id="budget" type="number" min="0" step="1" placeholder="不设预算" value={state.profile.budget ?? ""} onChange={(e) => update({ profile: { ...state.profile, budget: e.target.value ? Number(e.target.value) : null } })} /><span>每餐</span></div>
++             <div className="field-divider" /><label className="field-label">需要避开的食材</label><p className="field-hint">只有菜单里明确标注的食材能用于过滤，未注明的配料无法保证。</p><div className="token-form"><input value={excludedInput} onChange={(e) => setExcludedInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("excludedIngredients", excludedInput, () => setExcludedInput("")); } }} placeholder="输入食材，例如：花生" /><button className="outline-button" onClick={() => addListValue("excludedIngredients", excludedInput, () => setExcludedInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.excludedIngredients.map((item) => <button className="token danger-token" key={item} onClick={() => update({ profile: { ...state.profile, excludedIngredients: state.profile.excludedIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
++             <div className="field-divider" /><label className="field-label">喜欢的食材</label><div className="token-form"><input value={favoriteInput} onChange={(e) => setFavoriteInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput("")); } }} placeholder="输入喜欢的食材，例如：番茄" /><button className="outline-button" onClick={() => addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.favoriteIngredients.map((item) => <button className="token" key={item} onClick={() => update({ profile: { ...state.profile, favoriteIngredients: state.profile.favoriteIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
++             <div className="field-divider" /><label className="field-label" htmlFor="diet-notes">其他饮食习惯</label><textarea id="diet-notes" className="notes-area" maxLength={500} placeholder="例如：今天想吃清淡一点（只作为参考，不会替代硬性忌口）" value={state.profile.dietaryNotes} onChange={(e) => update({ profile: { ...state.profile, dietaryNotes: e.target.value } })} /><div className="safety-note">对严重过敏、交叉接触或无法明确确认的配料，请直接联系餐厅。我们不会声称任何一道菜一定安全。</div>
++           </section>
++         </div>}
++ 
++         {view === "context" && <div className="page">
++           <div className="page-title"><span className="eyebrow">HOW ARE YOU, REALLY?</span><h1>说说此刻，<br /><em>是什么心情</em></h1><p>心情和小小的当下情境可以改变偏好，但不会覆盖你的饮食限制。</p></div>
++           <section className="form-card mood-card"><span className="field-label">此刻最想要的感觉</span><div className="mood-options">{moods.map((mood, index) => <button key={mood} className={state.mood === mood ? "mood-option selected" : "mood-option"} onClick={() => update({ mood })}><span>{["♨", "❋", "✧", "◷", "♡"][index]}</span>{mood}{state.mood === mood && <i>✓</i>}</button>)}</div>
++             <div className="field-divider" /><label className="field-label" htmlFor="context-note">补充一点情境（选填）</label><p className="field-hint">只会作为温和的排序参考，不会变成硬性健康或安全判断。</p><textarea id="context-note" className="notes-area" maxLength={240} placeholder="比如：下雨了，想吃热乎的；午休时间比较短…" value={state.context} onChange={(e) => update({ context: e.target.value })} /><div className="context-tip"><span>✳</span><p>天气只是可选参考。天气服务失效时，推荐仍会照常进行。</p></div>
++           </section>
++           <button className="primary-button page-cta" onClick={() => void getRecommendation()}>按此刻的心情推荐 <span>↗</span></button>
++         </div>}
++ 
++         {view === "recommendations" && <div className="page">
++           <div className="page-title"><span className="eyebrow">MADE FOR THIS MOMENT</span><h1>今天，为你挑一道</h1><p>心情：{state.mood}{state.context ? ` · ${state.context}` : ""}　<span className="dot-divider">/</span>　硬性限制优先于所有偏好</p></div>
++           {busy && <div className="empty-card loading-card"><span>✳</span><b>正在认真挑选…</b><small>先过滤硬性限制，再从真实候选中排序。</small></div>}
++           {!busy && result?.recommendation && <section className="recommendation-card"><div className="rec-kicker"><span>✳ 今日这份心意</span><span>来自你的真实菜单</span></div><h2>{result.recommendation.dish.name}</h2><div className="rec-price">{formatPrice(result.recommendation.dish)}</div><p className="rec-reason">{result.recommendation.reasons.join(" · ")}</p><div className="rec-tags"><span>{state.mood}</span>{result.recommendation.dish.spicyLevel === "unknown" && <span>辣度未知</span>}{!result.recommendation.dish.ingredientsKnown && <span>配料未知</span>}</div><div className="allergen-warning"><b>关于过敏原</b><p>菜单可能没有列出全部配料或交叉接触信息。请向餐厅确认；此推荐不是安全保证。</p></div><div className="feedback-actions"><button className="primary-button" onClick={() => recordFeedback("liked")}>这道我喜欢 ♡</button><button className="outline-button" onClick={() => recordFeedback("rejected")}>换一道 ↗</button></div><p className="fallback-note">{result.reason}</p></section>}
++           {!busy && result && !result.recommendation && <div className="empty-card"><span>☼</span><b>这次没有合适的候选</b><small>{result.reason}</small><button className="outline-button" onClick={() => setView("menu")}>核对菜单</button></div>}
++           {!busy && !result && <div className="empty-card"><span>✳</span><b>还没有开始今天的挑选</b><small>准备好菜单和偏好后，我们再一起看看。</small><button className="primary-button" onClick={() => void getRecommendation()}>开始推荐 ↗</button></div>}
++           {result?.candidates && result.candidates.length > 1 && <div className="other-candidates"><span className="eyebrow">ALSO ON YOUR MENU</span><div>{result.candidates.filter((candidate) => candidate.dish.id !== current?.id).slice(0, 4).map((candidate) => <button key={candidate.dish.id} onClick={() => chooseCandidate(candidate)}><span>{candidate.dish.name}</span><small>{formatPrice(candidate.dish)}</small></button>)}</div></div>}
++           <section className="refine-card"><label htmlFor="refinement" className="field-label">还想微调一下？</label><p className="field-hint">说说你现在的口味。预算和忌口仍会优先保留。</p><div className="refine-row"><input id="refinement" value={state.refinement} maxLength={240} onChange={(e) => update({ refinement: e.target.value })} placeholder="比如：微辣就好，或想吃点热的" onKeyDown={(e) => { if (e.key === "Enter") void getRecommendation(); }} /><button className="outline-button" disabled={busy} onClick={() => void getRecommendation()}>重新挑选 ↗</button></div></section>
++         </div>}
++ 
++         {view === "history" && <div className="page">
++           <div className="page-title"><span className="eyebrow">A LITTLE FOOD MEMORY</span><h1>每一餐，都是一点点了解</h1><p>浏览过的推荐和你的反馈都会留在本机，帮下一次的选择慢慢更合心意。</p></div>
++           <section className="history-summary"><div><b>{state.history.length}</b><span>次推荐记录</span></div><div><b>{state.profile.favoriteIngredients.length}</b><span>份喜欢的食材</span></div><div><b>{state.rejectedDishIds.length}</b><span>已避开的菜品</span></div></section>
++           {state.history.length === 0 ? <div className="empty-card"><span>◷</span><b>还没有点单记忆</b><small>获得第一份推荐后，记录会出现在这里。</small><button className="primary-button" onClick={() => setView("recommendations")}>去看看菜单 ↗</button></div> : <div className="history-list">{state.history.map((entry) => <article key={entry.id} className="history-item"><span className="history-date">{new Date(entry.createdAt).toLocaleDateString("zh-CN", { month: "short", day: "numeric" })}</span><div><b>{entry.dish.name}</b><small>{entry.mood} · {formatPrice(entry.dish)}</small><p>{entry.reason}</p></div><span className={`feedback-mark ${entry.feedback ?? ""}`}>{entry.feedback === "liked" ? "喜欢" : entry.feedback === "rejected" ? "不喜欢" : "已推荐"}</span></article>)}</div>}
++           <button className="text-button clear-memory" onClick={() => { update({ history: [], rejectedDishIds: [] }); setResult(null); }}>清除本机记录与长期记忆</button>
++         </div>}
++ 
++         <footer className="page-footer"><span>用一点点心意，找到此刻的刚刚好。</span><span>过敏原请向餐厅确认 · 不作安全保证</span></footer>
++       </section>
++       <nav className="mobile-nav" aria-label="主导航">{nav.map((item) => <button key={item.id} className={view === item.id ? "mobile-nav-item active" : "mobile-nav-item"} onClick={() => setView(item.id)}><span>{item.icon}</span><small>{item.id === "preferences" ? "偏好" : item.id === "recommendations" ? "推荐" : item.id === "history" ? "记忆" : item.id === "context" ? "心情" : item.id === "menu" ? "菜单" : "首页"}</small></button>)}</nav>
++     </main>
++   );
++ }
++ 
++ export default function Home() {
++   return <AppShell />;
++ }
++
+
+ ❯ tests/fix2.test.ts:278:18
+    276|   it("blocks adding an additional favorite after the 50-item limit wit…
+    277|     const page = readFileSync(new URL("../app/page.tsx", import.meta.u…
+    278|     expect(page).toContain("偏爱食材最多 50 项");
+       |                  ^
+    279|     expect(page).toContain("favoriteIngredients.length >= 50");
+    280|     const capIndex = page.indexOf("favoriteIngredients.length >= 50");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[105/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 model and upload regressions > only sends verified-safe candidates to the model and rejects an unverified model pick
+AssertionError: expected '{"model":"gpt-4o-mini","messages":[{"…' not to contain 'unknown-ingredients'
+
+Expected: "unknown-ingredients"
+Received: "{"model":"gpt-4o-mini","messages":[{"role":"system","content":"你是选择器，只能从候选菜品中选择一个 dish_id，绝不能更改菜品、价格、食材或硬性规则。只输出 JSON：{\"dish_id\":\"候选id\",\"reason\":\"简短中文理由\"}。"},{"role":"user","content":"{\"mood\":\"随心看看\",\"context\":\"\",\"refinement\":\"\",\"dietaryNotes\":\"\",\"weatherHint\":null,\"candidates\":[{\"dish_id\":\"verified-safe\",\"name\":\"番茄饭\",\"score\":0,\"reasons\":[\"符合已设置的硬性条件\"]},{\"dish_id\":\"unknown-ingredients\",\"name\":\"主厨推荐\",\"score\":-1000,\"reasons\":[\"忌口无法核实：配料未知\"]}]}"}],"response_format":{"type":"json_object"},"temperature":0}"
+
+ ❯ tests/fix2.test.ts:302:26
+    300|     const sentBody = vi.mocked(fetch).mock.calls[0][1]?.body as string;
+    301|     expect(sentBody).toContain("verified-safe");
+    302|     expect(sentBody).not.toContain("unknown-ingredients");
+       |                          ^
+    303|     expect(result.recommendation.dish.id).toBe("verified-safe");
+    304|     expect(result.reason).toContain("安全切换");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[106/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 model and upload regressions > fills the image canvas white before drawing transparent source images
+AssertionError: expected '' to be '#fff' // Object.is equality
+
+- Expected
++ Received
+
+- #fff
+
+ ❯ tests/fix2.test.ts:328:23
+    326|     vi.stubGlobal("document", { createElement: () => canvas });
+    327|     await compressImage(original, async () => bitmap);
+    328|     expect(fillStyle).toBe("#fff");
+       |                       ^
+    329|     expect(operations).toEqual(["fill", "draw"]);
+    330|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[107/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 model and upload regressions > keeps an OCR entry whose price property is missing and normalizes its price to null
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/fix2.test.ts:352:31
+    350|     const result = await response.json();
+    351|     expect(response.status).toBe(200);
+    352|     expect(result.menu.items).toHaveLength(1);
+       |                               ^
+    353|     expect(result.menu.items[0].price).toBeNull();
+    354|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[108/110]⎯
+
+ FAIL  tests/fix2.test.ts > fix2 model and upload regressions > uses a placeholder rather than a concrete dish ID in the OCR prompt example
+AssertionError: expected '{"model":"gpt-4o-mini","messages":[{"…' not to contain 'dish-1'
+
+Expected: "dish-1"
+Received: "{"model":"gpt-4o-mini","messages":[{"role":"system","content":"你是菜单文字识别器，只能从图片中读取确实可见的信息，不得补全、推测或编造菜品、价格、配料或辣度。 模糊或不可见的价格必须为 null。配料没有清晰列出时 ingredients 必须为空数组、ingredientsKnown 为 false。 菜名必须是图片可读文字；无法确定的菜品不要输出。每个识别菜品给随机稳定短 id、货币符号、0 到 1 confidence。 只输出 JSON 对象，格式为 {\"items\":[{\"id\":\"dish-1\",\"name\":\"...\",\"description\":\"\",\"price\":null,\"currency\":\"¥\",\"ingredients\":[],\"ingredientsKnown\":false,\"spicyLevel\":\"unknown\",\"confidence\":0.5,\"verifiedByUser\":false}]}。"},{"role":"user","content":[{"type":"text","text":"逐张读取这些菜单照片上清晰可辨的菜品，不确定的内容请留空或省略菜品。"},{"type":"image_url","image_url":{"url":"data:image/jpeg;base64,/9j/"}}]}],"response_format":{"type":"json_object"},"temperature":0}"
+
+ ❯ tests/fix2.test.ts:367:26
+    365|     }));
+    366|     const sentBody = vi.mocked(fetch).mock.calls[0][1]?.body as string;
+    367|     expect(sentBody).not.toContain("dish-1");
+       |                          ^
+    368|     expect(sentBody).toContain("<generated-id>");
+    369|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[109/110]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  110 failed | 83 passed (193)
+   Start at  11:14:01
+   Duration  812ms (import 41%, transform 37%, tests 20%, worker 2%)
+
+
+Exit code: 1
