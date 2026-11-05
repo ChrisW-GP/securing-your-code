@@ -44,6 +44,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ recommendation: null, candidates: [], reason: emptyReason(data.profile, data.dishes) });
   }
   const safeDefault = candidates[0];
+  const hasVerifiedSafeCandidates = data.profile.excludedIngredients.length > 0
+    && candidates.some(({ dish }) => dish.ingredientsKnown);
+  const modelCandidates = hasVerifiedSafeCandidates
+    ? candidates.filter(({ dish }) => dish.ingredientsKnown)
+    : candidates;
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ recommendation: safeDefault, candidates, reason: "规则推荐（模型未配置）。" });
   }
@@ -62,7 +67,7 @@ export async function POST(request: Request) {
           refinement: data.refinement,
           dietaryNotes: data.profile.dietaryNotes,
           weatherHint,
-          candidates: candidates.map(({ dish, score, reasons }) => ({ dish_id: dish.id, name: dish.name, score, reasons })),
+          candidates: modelCandidates.map(({ dish, score, reasons }) => ({ dish_id: dish.id, name: dish.name, score, reasons })),
         }),
       },
     ]);
@@ -70,7 +75,7 @@ export async function POST(request: Request) {
     if (!pick.success) {
       return NextResponse.json({ recommendation: safeDefault, candidates, reason: "模型选择无效，已安全切换为规则推荐。" });
     }
-    const selected = candidates.find(({ dish }) => dish.id === pick.data.dish_id);
+    const selected = modelCandidates.find(({ dish }) => dish.id === pick.data.dish_id);
     if (!selected) {
       return NextResponse.json({ recommendation: safeDefault, candidates, reason: "模型选择无效，已安全切换为规则推荐。" });
     }

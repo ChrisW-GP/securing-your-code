@@ -1,0 +1,57 @@
+=== npm test ===
+
+> moodmenu-ai-mvp@1.0.0 test
+> vitest run
+
+
+ RUN  v5.1.0 C:/Users/n12322202/.copilot/repos/copilot-worktrees/securing-your-code/chrisw-gp-sturdy-sniffle/moodmenu
+
+
+ Test Files  5 passed (5)
+      Tests  224 passed (224)
+   Start at  11:12:42
+   Duration  1.15s (import 69%, tests 18%, transform 10%, worker 3%)
+
+
+Exit code: 0
+
+=== npm run typecheck ===
+
+> moodmenu-ai-mvp@1.0.0 typecheck
+> tsc --noEmit
+
+
+Exit code: 0
+
+=== npm run build ===
+
+> moodmenu-ai-mvp@1.0.0 build
+> next build
+
+▲ Next.js 16.4.4 (Turbopack)
+✓ Running next.config took 17ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1225ms
+  Running TypeScript ...
+  Finished TypeScript in 1397ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 392ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/menu
+└ ƒ /api/recommend
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+Exit code: 0

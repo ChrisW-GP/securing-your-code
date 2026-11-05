@@ -38,7 +38,7 @@ describe("fix1 utility regressions", () => {
     const canvas = {
       width: 0,
       height: 0,
-      getContext: () => ({ drawImage() {} }),
+      getContext: () => ({ drawImage() {}, fillRect() {}, fillStyle: "" }),
       toBlob(callback: BlobCallback, type: string, quality?: number) {
         encodedType = type;
         encodedQuality = quality ?? 0;

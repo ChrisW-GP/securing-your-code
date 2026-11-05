@@ -6,6 +6,7 @@ import { DishSchema, type Dish, type Mood } from "@/lib/schemas";
 import { createId } from "@/lib/ids";
 import { compressImage } from "@/lib/image";
 import { parseIngredientInput } from "@/lib/ingredients";
+import { getExclusionAliases } from "@/lib/recommend";
 import { photoPickerProps } from "@/lib/photo-picker";
 
 type View = "home" | "menu" | "preferences" | "context" | "recommendations" | "history";
@@ -202,6 +203,11 @@ function AppShell() {
   function addListValue(key: "excludedIngredients" | "favoriteIngredients", value: string, clear: () => void) {
     const item = value.trim();
     if (!item) return;
+    if (key === "favoriteIngredients" && !state.profile.favoriteIngredients.includes(item)
+      && state.profile.favoriteIngredients.length >= 50) {
+      setNotice("偏爱食材最多 50 项，请先删除一项再添加。");
+      return;
+    }
     update({ profile: { ...state.profile, [key]: [...new Set([...state.profile[key], item])] } });
     clear();
   }
@@ -274,7 +280,7 @@ function AppShell() {
         {view === "preferences" && <div className="page">
           <div className="page-title"><span className="eyebrow">A LITTLE MORE ABOUT YOU</span><h1>让喜欢和忌口，<br />都有被听见的地方</h1><p>这些偏好只保存在你的设备上，也会在每次推荐前硬性过滤。</p></div>
           <section className="form-card"><label className="field-label" htmlFor="budget">每餐预算上限</label><p className="field-hint">开启后，只有明确标注价格且不超预算的菜品会进入推荐。</p><div className="budget-row"><select value={state.profile.currency} aria-label="货币单位" onChange={(e) => update({ profile: { ...state.profile, currency: e.target.value } })}><option>¥</option><option>$</option><option>€</option><option>元</option></select><input id="budget" type="number" min="0" step="1" placeholder="不设预算" value={state.profile.budget ?? ""} onChange={(e) => update({ profile: { ...state.profile, budget: e.target.value ? Number(e.target.value) : null } })} /><span>每餐</span></div>
-            <div className="field-divider" /><label className="field-label">需要避开的食材</label><p className="field-hint">只有菜单里明确标注的食材能用于过滤，未注明的配料无法保证。</p><div className="token-form"><input value={excludedInput} onChange={(e) => setExcludedInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("excludedIngredients", excludedInput, () => setExcludedInput("")); } }} placeholder="输入食材，例如：花生" /><button className="outline-button" onClick={() => addListValue("excludedIngredients", excludedInput, () => setExcludedInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.excludedIngredients.map((item) => <button className="token danger-token" key={item} onClick={() => update({ profile: { ...state.profile, excludedIngredients: state.profile.excludedIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
+            <div className="field-divider" /><label className="field-label">需要避开的食材</label><p className="field-hint">只有菜单里明确标注的食材能用于过滤，未注明的配料无法保证。</p><div className="token-form"><input value={excludedInput} onChange={(e) => setExcludedInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("excludedIngredients", excludedInput, () => setExcludedInput("")); } }} placeholder="输入食材，例如：花生" /><button className="outline-button" onClick={() => addListValue("excludedIngredients", excludedInput, () => setExcludedInput(""))}>＋ 添加</button></div>            <div className="token-list">{state.profile.excludedIngredients.map((item) => <div className="exclusion-token" key={item}><button className="token danger-token" onClick={() => update({ profile: { ...state.profile, excludedIngredients: state.profile.excludedIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button><small>将同时排除：{getExclusionAliases(item).join("、")}</small></div>)}</div>
             <div className="field-divider" /><label className="field-label">喜欢的食材</label><div className="token-form"><input value={favoriteInput} onChange={(e) => setFavoriteInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput("")); } }} placeholder="输入喜欢的食材，例如：番茄" /><button className="outline-button" onClick={() => addListValue("favoriteIngredients", favoriteInput, () => setFavoriteInput(""))}>＋ 添加</button></div><div className="token-list">{state.profile.favoriteIngredients.map((item) => <button className="token" key={item} onClick={() => update({ profile: { ...state.profile, favoriteIngredients: state.profile.favoriteIngredients.filter((v) => v !== item) } })}>{item} <span>×</span></button>)}</div>
             <div className="field-divider" /><label className="field-label" htmlFor="diet-notes">其他饮食习惯</label><textarea id="diet-notes" className="notes-area" maxLength={500} placeholder="例如：今天想吃清淡一点（只作为参考，不会替代硬性忌口）" value={state.profile.dietaryNotes} onChange={(e) => update({ profile: { ...state.profile, dietaryNotes: e.target.value } })} /><div className="safety-note">对严重过敏、交叉接触或无法明确确认的配料，请直接联系餐厅。我们不会声称任何一道菜一定安全。</div>
           </section>

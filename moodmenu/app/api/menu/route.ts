@@ -68,7 +68,7 @@ export async function POST(request: Request) {
           "你是菜单文字识别器，只能从图片中读取确实可见的信息，不得补全、推测或编造菜品、价格、配料或辣度。",
           "模糊或不可见的价格必须为 null。配料没有清晰列出时 ingredients 必须为空数组、ingredientsKnown 为 false。",
           "菜名必须是图片可读文字；无法确定的菜品不要输出。每个识别菜品给随机稳定短 id、货币符号、0 到 1 confidence。",
-          "只输出 JSON 对象，格式为 {\"items\":[{\"id\":\"dish-1\",\"name\":\"...\",\"description\":\"\",\"price\":null,\"currency\":\"¥\",\"ingredients\":[],\"ingredientsKnown\":false,\"spicyLevel\":\"unknown\",\"confidence\":0.5,\"verifiedByUser\":false}]}。",
+          "只输出 JSON 对象，格式为 {\"items\":[{\"id\":\"<generated-id>\",\"name\":\"...\",\"description\":\"\",\"price\":null,\"currency\":\"¥\",\"ingredients\":[],\"ingredientsKnown\":false,\"spicyLevel\":\"unknown\",\"confidence\":0.5,\"verifiedByUser\":false}]}。",
         ].join(" "),
       },
       {
@@ -90,7 +90,9 @@ export async function POST(request: Request) {
         discardedCount += 1;
         continue;
       }
-      const price = typeof rawItem.price === "string" ? parseOcrPrice(rawItem.price) : rawItem.price;
+      const price = rawItem.price === undefined
+        ? null
+        : typeof rawItem.price === "string" ? parseOcrPrice(rawItem.price) : rawItem.price;
       const parsedItem = DishSchema.safeParse({
         ...rawItem,
         id: `ocr-${index}`,

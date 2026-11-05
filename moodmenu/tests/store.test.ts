@@ -10,7 +10,7 @@ import {
 import { DishSchema, MenuSchema } from "../lib/schemas";
 
 describe("local preference persistence", () => {
-  it("restores validated preferences and long-term memory", () => {
+  it("restores validated preferences and stored recommendation history", () => {
     const profile = {
       budget: 45,
       currency: "¥",
